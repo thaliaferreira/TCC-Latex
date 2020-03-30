@@ -34,6 +34,9 @@
 \RequirePackage{color}
 \RequirePackage{listings}
 
+\RequirePackage[alf]{abntex2cite}	% Citações padrão ABNT
+\RequirePackage{microtype} 			% para melhorias de justificação
+
 %==============================================================================
 % Códigos
 %==============================================================================
@@ -529,8 +532,7 @@
 %=====================================================================
 % Definição do conteúdo da bibliografia
 %=====================================================================
-\newcommand{\makebibspage}[2]{
+\newcommand{\makebibspage}[1]{
   \addcontentsline{toc}{chapter}{\bibname}
-  \bibliographystyle{#1}
-  \bibliography{#2}
+  \bibliography{#1}
 }{}
