@@ -231,7 +231,7 @@
 }
 \newcommand{\curso}[1]{\gdef\@curso{#1}}
 \newcommand{\titlepagetopinfo}{%
-  \MakeUppercase{\ufrj}\\
+  \MakeUppercase{\ufrrj}\\
   \MakeUppercase{\im}\\
   \@ifundefined{@dept}{}{\MakeUppercase{\csname \@dept\endcsname}\\}%
   \@ifundefined{@curso}{}{\MakeUppercase{\csname \@curso\endcsname}\\}%
@@ -266,7 +266,7 @@
     \bigskip
 
     \noindent
-    Projeto Final de Curso submetido ao Departamento de Ci\^encia da Computa\c{c}\~ao do Instituto de Matem\'atica da Universidade Federal do Rio de Janeiro como parte dos requisitos necess\'arios para obten\c{c}\~ao do grau de Bacharel em Inform\'atica.
+    Projeto Final de Curso submetido ao Departamento de Ci\^encia da Computa\c{c}\~ao do Instituto de Multidisciplinar da Universidade Federal Rural do Rio de Janeiro como parte dos requisitos necess\'arios para obten\c{c}\~ao do grau de Bacharel em Ci\^encia da Computa\c{c}\~ao.
 
     \noindent
     Apresentado por:
