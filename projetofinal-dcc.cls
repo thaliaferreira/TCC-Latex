@@ -37,16 +37,16 @@
 \RequirePackage[alf]{abntex2cite}	% Citações padrão ABNT
 \RequirePackage{microtype} 			% para melhorias de justificação
 
+\RequirePackage{booktabs}           % comandos extras para as tabelas
+
+\RequirePackage[table]{xcolor}
+
+\newcommand*{\eg}{\textit{e.g.}\@\xspace}
+\newcommand*{\ie}{\textit{i.e.}\@\xspace}
+
 %==============================================================================
 % Códigos
 %==============================================================================
-\definecolor{dkgreen}{rgb}{0,0.6,0}
-\definecolor{gray}{rgb}{0.5,0.5,0.5}
-\definecolor{black}{rgb}{0,0,0}
-\definecolor{blue}{rgb}{0,0,0.4}
-\definecolor{purple}{rgb}{0.8,0,0.3}
-\definecolor{orange}{rgb}{1,0.4,0}
-
 \newcommand{\codejava}[3]{
   \mbox{
     \lstset{framexleftmargin=5mm, frame=shadowbox, rulesepcolor=\color{gray}}

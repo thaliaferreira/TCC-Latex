@@ -1,18 +1,55 @@
-\chapter{Lorem ipsum dolor sit amet}\label{chp:LABEL_APP_1}
+\chapter{Dicas e Boas Práticas} \label{chp:ap_dicas}
 
-Consulte as demais normas da série ``Informação e documentação'' da ABNT
-para outras informações. Uma lista com as principais normas dessa série, todas
-observadas pelo ABNT, é apresentada em \citeonline{abntex2classe}.
+Esse apêndice tem como objetivo explicar como construir um texto científico, apresentando dicas na construção do texto e demonstrando exemplos de códigos em LaTeX para as principais necessidades na elaboração do texto.
 
 % ---
-\section{Inclusão de outros arquivos}\label{sec-include}
+\section{Escrita científica}
 % ---
 
-É uma boa prática dividir o seu documento em diversos arquivos, e não
-apenas escrever tudo em um único. Esse recurso foi utilizado neste
-documento. Para incluir diferentes arquivos em um arquivo principal,
-de modo que cada arquivo incluído fique em uma página diferente, utilize o
-comando:
+Texto científico é o nome dado a um tipo de texto utilizado no meio científico, ou seja, 
+é uma produção textual que circula em meio científico. 
+Dentre as principais características está seu escopo muito específico: o texto científico aborda fatos científicos, 
+ou seja, 
+resultados de um estudo, pesquisa ou trabalho que tenha a ver com conhecimento científico. 
+O texto pode falar sobre ideias, procedimentos, resultados ou descobertas.
+
+Uma monografia é um texto científico, ou seja, é um relatório técnico que irá explicar os procedimentos e resultados do projeto final.
+O leitor precisa entender o conteúdo desse texto sem precisar tentar adivinhar ou supor alguma informação.
+Desta maneira, a escrita precisa ser direta e não pode ser ambígua. 
+O importante do texto é mostrar com precisão o relato científico ao leitor.
+
+Desta forma, um aspecto fundamental é sobre a construção das frases.
+Somos acostumados a achar frases longas mais elegantes e somos influenciados a achar que essa característica pode deixar o texto mais rico.
+Dependendo do tamanho das frases, mais complexas ela se tornam para manter a coerência e a coesão.
+Dependendo da situação é válido quebrar as frases para tornar o texto mais simples e direto, evitando assim ambiguidade.
+
+Outra dica é quebrar as frases no LaTeX.
+O compilador do LaTeX só considera uma frase quando existe uma linha vazia. 
+Desta forma,
+é muito útil quebrar as frases do parágrafo, 
+facilitando a revisão do texto.
+Segue abaixo um exemplo prático.
+
+\begin{verbatim}
+   Lorem ipsum dolor sit amet, 
+   consectetur adipiscing elit. 
+   Nulla ut est velit. 
+   Cras vehicula at augue a pharetra. 
+   Aenean consectetur elit sed ipsum euismod aliquet. 
+   Vivamus sollicitudin ullamcorper ullamcorper,
+   phasellus ut augue nec tellus rhoncus facilisis. 
+\end{verbatim}
+
+% ---
+\section{Inclusão de outros arquivos}
+% ---
+
+É uma boa prática dividir o seu documento em diversos arquivos, 
+e não
+apenas escrever tudo em um único. 
+Esse recurso foi utilizado neste documento. 
+Para incluir diferentes arquivos em um arquivo principal, 
+de modo que cada arquivo incluído fique em uma página diferente, utilize o comando:
 
 \begin{verbatim}
    \include{documento-a-ser-incluido}      % sem a extensão .tex
@@ -24,22 +61,35 @@ Para incluir documentos sem quebra de páginas, utilize:
    \input{documento-a-ser-incluido}      % sem a extensão .tex
 \end{verbatim}
 
-\section{Tables}\label{sec:LABEL_CHP_2_SEC_A}
-Reference: \url{http://en.wikibooks.org/wiki/LaTeX/Tables}
 
-\begin{table}[!h]
+
+% ---
+\section{Citações}
+% ---
+
+AQUI FALAR SOBRE CITACOES
+
+% ---
+\section{Imagens e Tabelas}\label{sec:LABEL_CHP_2_SEC_A}
+% ---
+
+Toda tabela~\ref{tab:MATRIX_NOTAS_EXEMPLO}
+
+\begin{table}[!htb]
   \centering
-  \begin{tabular}{ |l|l|l| }
-    \hline
-      Goalkeeper & Alan Smith & Paul Robinson \\
-    \hline
-      Lucus Radebe &  Mark Viduka & Michael Duberry \\
-    \hline
-      Eirik Bakke & Jamie McMaster & Jody Morris \\
-    \hline
+  \caption{Fragmento de uma matriz de notas de um sistema de recomendação de filmes.}
+  \label{tab:MATRIX_NOTAS_EXEMPLO}
+  \rowcolors{1}{}{lightlightgray}
+  \begin{tabular}{l c c c}
+  \toprule
+    & Titanic & Poderoso Chefão & Matrix \\
+    \midrule
+        Filipe Braida & 4 & $\emptyset$ & 3  \\
+        Leandro Alvim & 4 & 5 & 5  \\
+        Bruno Dembogurski & 4 & 5 & 5  \\
+        Fellipe Duarte & $\emptyset$ & 5 & $\emptyset$  \\ 
+    \bottomrule
   \end{tabular}
-  \caption{This table shows some data}
-  \label{tab:LABEL_TAB_1}
 \end{table}
 
 \section{Images}\label{sec:LABEL_CHP_2_SEC_B}
@@ -52,7 +102,27 @@ Reference: \url{http://en.wikibooks.org/wiki/LaTeX/Importing_Graphics}
   \label{fig:LABEL_FIG_1}
 \end{figure}
 
-\section{Equations}\label{sec:LABEL_CHP_2_SEC_C}
+\begin{algorithm}[H]
+\floatname{algorithm}{Algoritmo}
+
+\textbf{Entrada} conjunto de notas $R$, limiar $\tau$, modelo de previsão $\varphi$.
+
+\textbf{Saída} conjunto de notas sem ruídos $R^{*}$.
+
+$R^{*} \gets \{\}$
+
+\For{$(u, i, r) \in R$}{
+$\tilde{r} \gets \varphi(u,i)$\;
+
+\If{$|\tilde{r} - r| < \tau$}{
+$R^{*} \gets R^{*} \cup \{(u,i,r)\}$
+}
+}
+\caption{Filtragem das avaliações com ruído proposto por \cite{OMahony2006}.}
+\label{alg:mahony}
+\end{algorithm}
+
+\section{Equações}
 Reference: \url{http://en.wikibooks.org/wiki/LaTeX/Mathematics}
 
 Also: \url{http://en.wikibooks.org/wiki/LaTeX/Advanced_Mathematics}
