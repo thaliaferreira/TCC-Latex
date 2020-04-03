@@ -39,7 +39,9 @@
 
 \RequirePackage{booktabs}           % comandos extras para as tabelas
 
-\RequirePackage[table]{xcolor}
+\RequirePackage[table]{xcolor}      % definir cor para as linhas da tabela
+
+\RequirePackage{csquotes}           % citações de frases
 
 \newcommand*{\eg}{\textit{e.g.}\@\xspace}
 \newcommand*{\ie}{\textit{i.e.}\@\xspace}
