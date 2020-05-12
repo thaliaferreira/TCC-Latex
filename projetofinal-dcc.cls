@@ -33,6 +33,7 @@
 
 \RequirePackage{color}
 \RequirePackage{listings}
+\RequirePackage{enumitem}
 
 \RequirePackage[alf]{abntex2cite}	% Citações padrão ABNT
 \RequirePackage{microtype} 			% para melhorias de justificação
@@ -121,15 +122,17 @@
   \expandafter\gdef\csname @author\alph{ii@authorcount}thanks\endcsname{#2}
 }
 % Orientador
-\DeclareRobustCommand{\advisor}[3][]{
+\DeclareRobustCommand{\advisor}[4][1]{
   \gdef\@advisorname{#2}
   \gdef\@advisororigin{#3}
+  \gdef\@advisorgender{#4}
   \gdef\@advisor{#1~#2}
 }
 %Co-orientador
-\DeclareRobustCommand{\coadvisor}[3][]{
+\DeclareRobustCommand{\coadvisor}[4][1]{
   \gdef\@coadvisorname{#2}
   \gdef\@coadvisororigin{#3}
+  \gdef\@coadvisorgender{#4}
   \gdef\@coadvisor{#1~#2}
 }
 % Banca - max = 3
@@ -239,8 +242,8 @@
   \@ifundefined{@curso}{}{\MakeUppercase{\csname \@curso\endcsname}\\}%
 }
 \newcommand{\titlepageadvisorinfo}{%
-  \@ifundefined{@advisor}{}{\vfill\@advisor\\\advisorname}
-  \@ifundefined{@coadvisor}{}{\\[6ex]\@coadvisor\\\coadvisorname}
+  \@ifundefined{@advisor}{}{\vfill\@advisor\\\ifthenelse{\equal{\@advisorgender}{a}}{\advisoraname}{\advisorname}}
+  \@ifundefined{@coadvisor}{}{\\[6ex]\@coadvisor\\\ifthenelse{\equal{\@coadvisorgender}{a}}{\coadvisoraname}{\coadvisorname}}
 }
 
 %=====================================================================
@@ -268,7 +271,7 @@
     \bigskip
 
     \noindent
-    Projeto Final de Curso submetido ao Departamento de Ci\^encia da Computa\c{c}\~ao do Instituto de Multidisciplinar da Universidade Federal Rural do Rio de Janeiro como parte dos requisitos necess\'arios para obten\c{c}\~ao do grau de Bacharel em Ci\^encia da Computa\c{c}\~ao.
+    Projeto Final de Curso submetido ao Departamento de Ci\^encia da Computa\c{c}\~ao do Instituto Multidisciplinar da Universidade Federal Rural do Rio de Janeiro como parte dos requisitos necess\'arios para obten\c{c}\~ao do grau de Bacharel em Ci\^encia da Computa\c{c}\~ao.
 
     \noindent
     Apresentado por:
@@ -350,7 +353,8 @@
     \normalsize
 
     \noindent
-    Orientador: \@advisorname\\
+    \@ifundefined{@advisorgender}{}{\ifthenelse{\equal{\@advisorgender}{a}}{\advisoraname}{\advisorname}}{:}
+    \@advisorname\\
     \@advisororigin\\
 
     \renewcommand{\baselinestretch}{1.5}
@@ -522,6 +526,17 @@
 {
   \end{list}
 }
+
+% Ambiente para alineas e e subalineas (incisos)
+% ABNT NBR 6024/2012 - 4.2 e 4.3
+\newlist{alineas}{enumerate}{2}
+\setlist[alineas,1]{label={\alph*)},topsep=0pt,itemsep=0pt,leftmargin=\parindent+\labelwidth-\labelsep}%
+\setlist[alineas,2]{label={--},topsep=0pt,itemsep=0pt,leftmargin=*}
+\newlist{subalineas}{enumerate}{1}
+\setlist[subalineas,1]{label={--},topsep=0pt,itemsep=0pt,leftmargin=*}%
+\newlist{incisos}{enumerate}{1}
+\setlist[incisos,1]{label={--},topsep=0pt,itemsep=0pt,leftmargin=*}%
+% ---
 
 %=====================================================================
 % Definição do conteúdo da tabela de conteúdo
