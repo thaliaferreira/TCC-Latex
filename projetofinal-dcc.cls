@@ -44,8 +44,25 @@
 
 \RequirePackage{csquotes}           % citações de frases
 
+\RequirePackage[printonlyused]{acronym}
+\RequirePackage{nomencl}
+\RequirePackage{ccaption}
+
 \newcommand*{\eg}{\textit{e.g.}\@\xspace}
 \newcommand*{\ie}{\textit{i.e.}\@\xspace}
+
+
+% ---
+% compila o indice
+% ---
+\makeindex
+% ---
+
+% ---
+% Compila a lista de abreviaturas e siglas
+% ---
+\makenomenclature
+% ---
 
 %==============================================================================
 % Códigos
@@ -476,11 +493,11 @@
 % Definição do conteúdo de listas de abreviaturas e símbolos
 %=====================================================================
 \newcommand{\makeabrevpage}[1]{
-  \begin{listofabbrv}{XXXXXX}
-    #1
-  \end{listofabbrv}
+  \chapter*{\listabbrvname}
+  \addcontentsline{toc}{chapter}{\listabbrvname}
+  #1
   \pagebreak
-}{}
+}
 
 \newcommand{\makesymbolspage}[1]{
   \begin{listofsymbols}{XXXXXX}
@@ -553,3 +570,9 @@
   \addcontentsline{toc}{chapter}{\bibname}
   \bibliography{#1}
 }{}
+
+%=====================================================================
+% Teoremas, Definições
+%=====================================================================
+\newtheorem{definition}{Definição}
+\newtheorem{theorem}{Teorema}[section]

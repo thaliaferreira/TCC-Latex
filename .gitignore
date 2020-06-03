@@ -250,3 +250,13 @@ pip-log.txt
 ## Build tool directories for auxiliary files
 # latexrun
 latex.out/
+
+# makeidx
+*.idx
+*.ilg
+*.ind
+
+# nomencl
+*.nlg
+*.nlo
+*.nls

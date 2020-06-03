@@ -60,6 +60,7 @@ Reference: \url{http://en.wikibooks.org/wiki/LaTeX/Importing_Graphics}
   \includegraphics[width=0.6\textwidth]{imagens/chick.png}
   \caption{Chick}
   \label{fig:LABEL_FIG_1}
+  \legend{Fonte: o autor.}
 \end{figure}
 
 \begin{algorithm}[H]
@@ -113,3 +114,26 @@ Reference: \url{http://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings}
   \item Segundo \citeonline{braida2015transforming}, ....
   \item Referencing \refappendix{chp:LABEL_APP_1}  
 \end{alineas}
+
+
+
+\section{Definições, Teoremas}
+
+\begin{definition}\label{def:def1}
+  Aqui é uma nova definição.
+\end{definition}
+
+\begin{definition}[Título] \label{def:def2}
+  Aqui é uma outra definição.
+\end{definition}
+
+\begin{theorem}\label{the:the1}
+  Aqui é um teorema.
+\end{theorem}
+
+Seguindo a Definição \ref{def:def1} e Teorema \ref{the:the1}.
+
+
+
+\section{Acrônimos, Siglas}
+  Um \ac{SR}... Portanto, o \ac{SR}...
