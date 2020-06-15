@@ -35,8 +35,8 @@
 \RequirePackage{listings}
 \RequirePackage{enumitem}
 
-\RequirePackage[alf]{abntex2cite}	% Citações padrão ABNT
-\RequirePackage{microtype} 			% para melhorias de justificação
+\RequirePackage[alf]{abntex2cite}   % Citações padrão ABNT
+\RequirePackage{microtype}          % para melhorias de justificação
 
 \RequirePackage{booktabs}           % comandos extras para as tabelas
 
@@ -44,27 +44,12 @@
 
 \RequirePackage{csquotes}           % citações de frases
 
-\RequirePackage[printonlyused]{acronym}
-\RequirePackage{nomencl}
-\RequirePackage{ccaption}
+\RequirePackage[printonlyused]{acronym}   % criar lista de acrônimos 
+\RequirePackage{ccaption}                 % adicionar legendas numeradas e não numeradas (ex. fonte da imagem)
 
 \newcommand*{\eg}{\textit{e.g.}\@\xspace}
 \newcommand*{\ie}{\textit{i.e.}\@\xspace}
 
-
-% ---
-% compila o indice
-% ---
-\makeindex
-% ---
-
-% ---
-% Compila a lista de abreviaturas e siglas
-% ---
-\makenomenclature
-% ---
-
-%==============================================================================
 % Códigos
 %==============================================================================
 \newcommand{\codejava}[3]{
@@ -500,52 +485,16 @@
 }
 
 \newcommand{\makesymbolspage}[1]{
-  \begin{listofsymbols}{XXXXXX}
-    #1
-  \end{listofsymbols}
+  \chapter*{\listsymbolname}
+  \addcontentsline{toc}{chapter}{\listsymbolname}  
+  #1
   \pagebreak
 }{}
 
 %=====================================================================
-% Definição das listas de abreviaturas e siglas e de símbolos
-%=====================================================================
-\newenvironment{listofabbrv}[1]{
-  \chapter*{\listabbrvname}
-  \addcontentsline{toc}{chapter}{\listabbrvname}
-  \begin{list}{\textbf{??}}{
-    \settowidth{\labelwidth}{#1}
-    \setlength{\labelsep}{1em}
-    \setlength{\itemindent}{0mm}
-    \setlength{\leftmargin}{\labelwidth}
-      \addtolength{\leftmargin}{\labelsep}
-    \setlength{\rightmargin}{0mm}
-    \setlength{\itemsep}{.1\baselineskip}
-    \renewcommand{\makelabel}[1]{\makebox[\labelwidth][l]{##1}}
-  }
-}
-{
-  \end{list}
-}
-\newenvironment{listofsymbols}[1]{
-  \chapter*{\listsymbolname}
-  \addcontentsline{toc}{chapter}{\listsymbolname}
-  \begin{list}{\textbf{??}}{
-    \settowidth{\labelwidth}{#1}
-    \setlength{\labelsep}{1em}
-    \setlength{\itemindent}{0mm}
-    \setlength{\leftmargin}{\labelwidth}
-      \addtolength{\leftmargin}{\labelsep}
-    \setlength{\rightmargin}{0mm}
-    \setlength{\itemsep}{.1\baselineskip}
-    \renewcommand{\makelabel}[1]{\makebox[\labelwidth][l]{##1}}
-  }
-}
-{
-  \end{list}
-}
-
 % Ambiente para alineas e e subalineas (incisos)
 % ABNT NBR 6024/2012 - 4.2 e 4.3
+%=====================================================================
 \newlist{alineas}{enumerate}{2}
 \setlist[alineas,1]{label={\alph*)},topsep=0pt,itemsep=0pt,leftmargin=\parindent+\labelwidth-\labelsep}%
 \setlist[alineas,2]{label={--},topsep=0pt,itemsep=0pt,leftmargin=*}
