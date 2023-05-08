@@ -28,6 +28,27 @@ Ao satisfazer todos os requisitos de sistema, podemos garantir que o software é
 
 -Visualizar relatórios
 
+\begin{table}[]
+    \centering
+    \caption{Requisitos do Sistema}
+    \label{tab:tabela_requisios_do_sistema}
+    \resizebox{\textwidth}{!}{%
+    \rowcolors{1}{}{lightlightgray}
+    \begin{tabular}{ccc}
+    \hline
+    \textbf{ID} & \textbf{Nome} & \textbf{Descrição} \\ \hline
+    \textbf{RF01} & Cadastrar disciplina & \begin{tabular}[c]{@{}c@{}}O sistema permiritá que o usuário inclua disciplina\\ informando NOME, TURNO, PROFESSOR, PERÍODO LETIVO\end{tabular} \\
+    \textbf{RF02} & Editar disciplina & \begin{tabular}[c]{@{}c@{}}O sistema permitirá que o usuário edite \\o NOME, TURNO, PROFESSOR e PERÍODO LETIVO de uma disciplina \end{tabular} \\
+    \textbf{RF03} & Excluir disciplina & O sistema permitirá que o usuário exclua uma disciplina \\
+    \textbf{RF04} & Listar disciplinas & \begin{tabular}[c]{@{}c@{}}O sistema permitirá a visualização de uma disciplina\\ (NOME, TURNO, PROFESSOR)\end{tabular} \\
+    \textbf{RF05} & Cadastrar período & O sistema permitirá que o usuário inclua um período letivo (ANO) \\
+    \textbf{RF06} & Editar período & \begin{tabular}[c]{@{}c@{}}O sistema permitirá que o usuário edite o ano \\ de um período letivo cadastrado no sistema\end{tabular} \\
+    \textbf{RF07} & Excluir período & O sistema permitirá que o usuário exclua um período letivo \\
+    \textbf{RF08} & Visualizar relatório & \begin{tabular}[c]{@{}c@{}}O sistema permitirá a visualização de \\ períodos letivos cadastrados no sistema\end{tabular}
+    \end{tabular}%
+    }
+\end{table}
+
 \section{Casos de Uso}
 Os casos de uso são uma metodologia com objetivo de documentar as principais funcionalidades do sistema do ponto de vista do usuário final. Eles consistem de possíveis sequências de interações entre o usuário e o sistema.
 
@@ -45,6 +66,28 @@ Os casos de uso são uma metodologia com objetivo de documentar as principais fu
 
 -Visualizar relatórios
 
+\begin{table}[]
+    \centering
+    \caption{Casos de Uso}
+    \label{tab:tabela_casos_de_uso}
+    \resizebox{\textwidth}{!}{%
+    \rowcolors{1}{}{lightlightgray}
+    \begin{tabular}{cccc}
+    \hline
+    \textbf{ID} & \textbf{Nome} & \textbf{Agente} & \textbf{Descrição} \\ \hline
+    \textbf{UC01} & Efetuar login & \begin{tabular}[c]{@{}c@{}}Aluno, Coordenador\\ ou Professor\end{tabular} & \begin{tabular}[c]{@{}c@{}}Autenticação de usuários cadastrados no sistema,\\  permitindo a realização de operações restritas à cada perfil\end{tabular} \\
+    \textbf{UC01} & Efetuar login & \begin{tabular}[c]{@{}c@{}}Aluno, Coordenador\\ ou Professor\end{tabular} & \begin{tabular}[c]{@{}c@{}}Autenticação de usuários cadastrados no sistema,\\ permitindo a realização de operações restritas à cada perfil\end{tabular} \\
+    \textbf{UC02} & Cadatrar usuário & Coordenador & \begin{tabular}[c]{@{}c@{}}Inclusão no sistema usuários para  executar as operações de acordo \\ com o perfil (Aluno ou Professor)\end{tabular} \\
+    \textbf{UC03} & Visualizar disciplina & Aluno ou Professor & Visualização das informações da disciplina: Ano letivo, professor \\
+    \textbf{UC04} & Avaliar disciplina & Aluno & Avaliação da disciplina cursada no ano letivo em questão \\
+    \textbf{UC05} & Cadastrar disciplina & Coordenador & \begin{tabular}[c]{@{}c@{}}Cadastro de uma disciplina no sistema informando NOME, PERÍODO LETIVO, \\ TURNO e PROFESSOR\end{tabular} \\
+    \textbf{UC06} & Cadastrar período & Professor & Cadastro de ano letivo no sistema (ANO) \\
+    \textbf{UC07} & Visualizar relatório & Coordenador ou Professor & Visualização das avaliações feitas pelos alunos da disciplina
+    \end{tabular}%
+    }
+\end{table}
+
+
 \section{Trabalhos Relacionados}
 Neste tópico serão apresentados alguns sistemas de avaliação aplicados por universidades e trabalhos acerca da avaliação institucional no ensino superior.
 De uma maneira mais geral, temos o \href{https://www.ratemyprofessors.com/}{Rate my Professors}, que foi criado
@@ -58,7 +101,6 @@ Exemplo:
 Universidad de Buenos Aires (UBA)
 Universidade de São Paulo (USP) = Avaliação Institucional da USP
 Universidade Federal FLuminense (UFF) = Avaliação Institucional da UFF
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % [1] - Cad. Cedes, Campinas vol. 29, n. 78, p. 257-269, maio/ago. 2009 257 Disponível em <http://www.cedes.unicamp.br>
 % [2] - 
