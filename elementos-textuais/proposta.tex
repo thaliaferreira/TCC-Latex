@@ -15,18 +15,10 @@ O sistema conta com uma tela de cadastro que pode ser usada tanto por alunos e p
 
 Administradores do sistema poderão cadastrar períodos e disciplinas, e associar os professores a suas respectivas disciplinas. 
 
-\section{Requisitos de sistema}
+\subsection{Requisitos de sistema}
 Os requisitos de sistema são descrições sobre o que o sistema deve ser capaz de fazer para cumprir com as regras de negócios. Eles podem ser divididos em requisitos funcionais e não funcionais. Os requisitos funcionais são aqueles que o sistema deve ter para atender a necessidade do usuário final. Já os não funcionais devem apresentar as limitações do sistema desenvolvido.
 
 Ao satisfazer todos os requisitos de sistema, podemos garantir que o software é confiável e funcional. 
-
--Visualizar lista de disciplina
-
--Avaliar disciplina
-
--Cadastrar/editar/excluir disciplina/período
-
--Visualizar relatórios
 
 \begin{table}[]
     \centering
@@ -49,22 +41,8 @@ Ao satisfazer todos os requisitos de sistema, podemos garantir que o software é
     }
 \end{table}
 
-\section{Casos de Uso}
+\subsection{Casos de Uso}
 Os casos de uso são uma metodologia com objetivo de documentar as principais funcionalidades do sistema do ponto de vista do usuário final. Eles consistem de possíveis sequências de interações entre o usuário e o sistema.
-
--Cadastro
-
--Login
-
--Visualizar disciplinas
-
--Avaliar disciplina
-
--Cadastrar disciplina
-
--Cadastrar período
-
--Visualizar relatórios
 
 \begin{table}[]
     \centering
@@ -75,7 +53,6 @@ Os casos de uso são uma metodologia com objetivo de documentar as principais fu
     \begin{tabular}{cccc}
     \hline
     \textbf{ID} & \textbf{Nome} & \textbf{Agente} & \textbf{Descrição} \\ \hline
-    \textbf{UC01} & Efetuar login & \begin{tabular}[c]{@{}c@{}}Aluno, Coordenador\\ ou Professor\end{tabular} & \begin{tabular}[c]{@{}c@{}}Autenticação de usuários cadastrados no sistema,\\  permitindo a realização de operações restritas à cada perfil\end{tabular} \\
     \textbf{UC01} & Efetuar login & \begin{tabular}[c]{@{}c@{}}Aluno, Coordenador\\ ou Professor\end{tabular} & \begin{tabular}[c]{@{}c@{}}Autenticação de usuários cadastrados no sistema,\\ permitindo a realização de operações restritas à cada perfil\end{tabular} \\
     \textbf{UC02} & Cadatrar usuário & Coordenador & \begin{tabular}[c]{@{}c@{}}Inclusão no sistema usuários para  executar as operações de acordo \\ com o perfil (Aluno ou Professor)\end{tabular} \\
     \textbf{UC03} & Visualizar disciplina & Aluno ou Professor & Visualização das informações da disciplina: Ano letivo, professor \\
