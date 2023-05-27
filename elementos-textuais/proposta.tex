@@ -1,30 +1,105 @@
 \chapter{Proposta}\label{chp:PROPOSTA}
 
+% falar sobre o capitulo
+
+\section{Motivação}
+
+% Intro
+% SINAES
+
 No Brasil, desde 2004 por meio da Lei n° 10.861 as instituições de ensino superior devem estar de acordo com as normas do Sistema Nacional de Avaliação da Educação Superior (SINAES)
 cujo objetivo é contribuir para a melhoria contínua dos cursos e instituições avaliando 
 os aspectos relacionados ao ensino, pesquisa, extensão, do corpo docente, da gestão institucional, bem como a responsabilidade social e infraestrutura.
 
+% Problema: SINAES mt abrangente
+% Solução: Sistema prórprio da universidade de avaliação
+
+A avaliação da qualidade do ensino superior é uma tarefa complexa que demanda a consideração de diversos fatores.
+Embora o SINAES desempenhe um papel importante nesse processo no Brasil,
+sua metodologia geral de avaliação é aplicada a todas as áreas do conhecimento,
+o que pode não levar em conta especificidades de determinadas áreas.
+Diante dessas limitações, sugere-se que as instituições e os órgãos de regulação estejam atentos a
+essas limitações e busquem complementar a avaliação do SINAES com outros mecanismos de avaliação mais específicos e adequados a cada caso. 
+
+% Entre as principais limitações, destacam-se a desigualdade de condições das instituições, as restrições dos instrumentos de avaliação, a ocorrência de problemas estruturais e as limitações do processo de avaliação.
+% Essas limitações podem comprometer a eficácia do SINAES como um sistema de avaliação da qualidade da educação superior no país, especialmente em casos específicos.
+
+% Mas pq um sistema web? %
+% -> Privacidade do aluno ao dar o feedback
+% -> Agilidade e eficiencia na coleta e análise dos dados
+% -> Acompanhamento em tempo real 
+% -> Fácil acesso
+
+É importante que os alunos sejam incentivados a fornecer feedback honesto e construtivo
+sobre a qualidade de ensino e a experiência educacional que recebe. Isso pode ser feito por meio de pesquisas de satisfação, questionários ou grupos de discussão.
+Visando tanto a privacidade do aluno, quanto a 
+
+
+
 Para que a instituição esteja preparada para enfrentar desafios, é fundamental que seus membros tenham ciência de sua realidade, virtudes, capacidades e limitações.
-Segundo Nelson de Abreu Júnio[2] (2009), os processos avaliativos precisam envolver o maior número de participantes, tanto na construção de seu projeto quanto na análise e no uso dos resultados, contribuindo para o desenvolvimento humano. Desta forma, e com base no diagnóstico de suas condições, a tomada de decisões poderá ser feita de maneira ética.
+%Nelson de Abreu Júnio[2] (2009)
+Segundo \citeonline{nelsonAbreu2009}, os processos avaliativos precisam envolver o maior número de participantes, tanto na construção de seu projeto quanto na análise e no uso dos resultados, contribuindo para o desenvolvimento humano. Desta forma, e com base no diagnóstico de suas condições, a tomada de decisões poderá ser feita de maneira ética. 
 
-Esse capítulo propõe um sistema web de avaliação de disciplinas para o curso de Ciência da Computação da UFRRJ, com o objetivo de auxiliar o departamento do curso a tomar decisões que visem melhorar o ensino e aprendizado dos alunos.
 
-\section{Motivação}
+%\cite{braida2015transforming}
+%\citeonline{braida2015transforming}
+
+% justificar melhor o trabalho
+
+\section{Trabalhos Relacionados}
+Neste tópico serão apresentados alguns sistemas de avaliação aplicados por universidades e trabalhos acerca da avaliação institucional no ensino superior.
+
+De uma maneira mais geral, temos o \textit{Rate my Professors}\footnote{\url{https://www.ratemyprofessors.com/}}, que foi criado
+com a motivação de ajudar outros estudantes universitários a tomar decisões informadas ao escolher suas aulas e professores, acreditando que as opiniões dos alunos poderiam ajudar futuros alunos, tornando a seleção de aulas e professores mais transparente e informada.
+
+A Universidade Federal Fluminense (UFF) possui a Comissão Própria de Avaliação Institucional da UFF (CPA/UFF),
+responsável pela formulação do instrumento de avaliação da Universidade, conhecido como Sistema de Avaliação Institucional (SAI).
+O SAI foi desenvolvido com o propósito de coletar a perspectiva dos alunos e professores sobre os cursos de graduação,
+mediante a avaliação do desempenho efetivo nas disciplinas e da disponibilidade de infraestrutura para o seu funcionamento.
+Os resultados obtidos por meio dessa avaliação são analisados pela CPA/UFF, pelas Unidades Acadêmicas, pelos Departamentos de Ensino e pelas Coordenações de Curso,
+e servem como base para a reflexão acerca da qualidade do trabalho acadêmico realizado na UFF, gerando informações relevantes e necessárias para a reformulação dos Projetos Pedagógicos dos Cursos.
+
+
+
+% Falar sobre universidades que aplicam avaliações internas:
+% Exemplo: 
+% Universidad de Buenos Aires (UBA)
+% Universidade de São Paulo (USP) = Avaliação Institucional da USP
+% Universidade Federal FLuminense (UFF) = Avaliação Institucional da UFF
 
 
 \section{Proposta}
+
+Esse capítulo propõe um sistema web de avaliação de disciplinas para o curso de Ciência da Computação da UFRRJ, com o objetivo de auxiliar o departamento do curso a tomar decisões que visem melhorar o ensino e aprendizado dos alunos.
+
 O intuito desse trabalho é desenvolver um sistema web onde os alunos da Universidade Federal Rural do Rio de Janeiro possam avaliar as disciplinas ofertadas ao longo do período. O sistema permite que os aluno acessem um questionário de avaliação para cada disciplina em que ele estava matriculado. Esse questionário conta com perguntas que podem medir a qualidade da didática do professor, a ementa da disciplina, as avaliações, entre outros.
 
 O sistema conta com uma tela de cadastro que pode ser usada tanto por alunos e professores da universidade e uma tela de login. Caso o usuário logado seja um aluno, ele poderá visualizar uma lista das disciplinas em que ele estava matriculado. O aluno pode avaliar cada disciplina dessa lista somente uma vez. Caso o usuário logado seja um professor, ele terá acesso a uma lista de disciplinas lecionadas por ele. Cada disciplina contará com um relatório com a média de avaliações recebidas. Caso o usuário seja um administrador, ele poderá acessar todas as disciplinas do curso de Ciência da Computação da UFRRJ, e visualizar o relatório de avaliações para cada uma delas.
 
 Administradores do sistema poderão cadastrar períodos e disciplinas, e associar os professores a suas respectivas disciplinas. 
 
+\subsection{Atores}
+Um ator é uma entidade externa que interage com o sistema e desempenha um papel específico dentro do contexto do sistema em análise.
+
+Ao identificar os atores, é possível determinar quais são as suas responsabilidades e como eles se relacionam com as funcionalidades do sistema. Essas informações são utilizadas para modelar os casos de uso e requisitos do sistema.
+
+Com base na proposta apresentada anteriormente, é possível identificar os seguintes atores:
+
+\begin{alineas}
+  \item Aluno: Representa os alunos do curso de Ciência da Computação. Eles podem visualizar a lista de disciplinas em que estão matriculados e avaliá-las apenas uma vez.
+  \item Professor: Representa os docentes responsáveis pelas disciplinas do curso. Eles podem visualizar as disciplinas que lecionam e um relatório com as avaliações recebidas para cada uma delas.
+  \item Coordenador: Representa o(s) coordenador(es) do curso. Eles têm a responsabilidade de cadastrar disciplinas, associar os professores às disciplinas ministradas por eles, e, principalmente, visualizar relatórios com as avaliações de cada disciplina. Esses relatórios são fundamentais para análise de resultados e tomadas de decisões estratégicas para melhorar a qualidade do curso.
+\end{alineas}
+
+Esses atores desempenham papéis distintos no sistema de avaliação de disciplinas, e cada um contribui de uma maneira para o funcionamento do sistema.
+
+
 \subsection{Requisitos de sistema}
 Os requisitos de sistema são descrições sobre o que o sistema deve ser capaz de fazer para cumprir com as regras de negócios. Eles podem ser divididos em requisitos funcionais e não funcionais. Os requisitos funcionais são aqueles que o sistema deve ter para atender a necessidade do usuário final. Já os não funcionais devem apresentar as limitações do sistema desenvolvido.
 
 Ao satisfazer todos os requisitos de sistema, podemos garantir que o software é confiável e funcional. 
 
-\begin{table}[]
+\begin{table}[h]
     \centering
     \caption{Requisitos do Sistema}
     \label{tab:tabela_requisios_do_sistema}
@@ -48,7 +123,7 @@ Ao satisfazer todos os requisitos de sistema, podemos garantir que o software é
 \subsection{Casos de Uso}
 Os casos de uso são uma metodologia com objetivo de documentar as principais funcionalidades do sistema do ponto de vista do usuário final. Eles consistem de possíveis sequências de interações entre o usuário e o sistema.
 
-\begin{table}[]
+\begin{table}[h]
     \centering
     \caption{Casos de Uso}
     \label{tab:tabela_casos_de_uso}
@@ -56,7 +131,7 @@ Os casos de uso são uma metodologia com objetivo de documentar as principais fu
     \rowcolors{1}{}{lightlightgray}
     \begin{tabular}{cccc}
     \hline
-    \textbf{ID} & \textbf{Nome} & \textbf{Agente} & \textbf{Descrição} \\ \hline
+    \textbf{ID} & \textbf{Nome} & \textbf{Ator} & \textbf{Descrição} \\ \hline
     \textbf{UC01} & Efetuar login & \begin{tabular}[c]{@{}c@{}}Aluno, Coordenador\\ ou Professor\end{tabular} & \begin{tabular}[c]{@{}c@{}}Autenticação de usuários cadastrados no sistema,\\ permitindo a realização de operações restritas à cada perfil\end{tabular} \\
     \textbf{UC02} & Cadatrar usuário & Coordenador & \begin{tabular}[c]{@{}c@{}}Inclusão no sistema usuários para  executar as operações de acordo \\ com o perfil (Aluno ou Professor)\end{tabular} \\
     \textbf{UC03} & Visualizar disciplina & Aluno ou Professor & Visualização das informações da disciplina: Ano letivo, professor \\
@@ -69,19 +144,7 @@ Os casos de uso são uma metodologia com objetivo de documentar as principais fu
 \end{table}
 
 
-\section{Trabalhos Relacionados}
-Neste tópico serão apresentados alguns sistemas de avaliação aplicados por universidades e trabalhos acerca da avaliação institucional no ensino superior.
-De uma maneira mais geral, temos o \href{https://www.ratemyprofessors.com/}{Rate my Professors}, que foi criado
-com a motivação de ajudar outros estudantes universitários a tomar decisões informadas ao escolher suas aulas e professores, acreditando que as opiniões dos alunos poderiam ajudar futuros alunos, tornando a seleção de aulas e professores mais transparente e informada.
 
-A Universidade Federal Fluminense (UFF) conta com o Sistema de Avaliação Institucional (SAI) desde 2003. Uma ferramenta
-crucial para a gestão de qualidade na univerdidade. Além de oferecer as avaliações de disciplinas e do corpo docente pelos estudantes, abrange também questões de infraestrutura, pesquisa de opinião e indicadores de satisfação.
-
-Falar sobre universidades que aplicam avaliações internas:
-Exemplo: 
-Universidad de Buenos Aires (UBA)
-Universidade de São Paulo (USP) = Avaliação Institucional da USP
-Universidade Federal FLuminense (UFF) = Avaliação Institucional da UFF
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % [1] - Cad. Cedes, Campinas vol. 29, n. 78, p. 257-269, maio/ago. 2009 257 Disponível em <http://www.cedes.unicamp.br>
 % [2] - 
