@@ -86,13 +86,28 @@ Ao identificar os atores, é possível determinar quais são as suas responsabil
 Com base na proposta apresentada anteriormente, é possível identificar os seguintes atores:
 
 \begin{alineas}
-  \item Aluno: Representa os alunos do curso de Ciência da Computação. Eles podem visualizar a lista de disciplinas em que estão matriculados e avaliá-las apenas uma vez.
-  \item Professor: Representa os docentes responsáveis pelas disciplinas do curso. Eles podem visualizar as disciplinas que lecionam e um relatório com as avaliações recebidas para cada uma delas.
+  \item Aluno: Representa os alunos do curso de Ciência da Computação. Eles podem visualizar a lista de disciplinas em que estão matriculados e avaliá-las uma vez.
+  \item Professor: Representa os professores responsáveis pelas disciplinas do curso. Eles podem visualizar as disciplinas que lecionam e um relatório com as avaliações recebidas para cada uma delas.
   \item Coordenador: Representa o(s) coordenador(es) do curso. Eles têm a responsabilidade de cadastrar disciplinas, associar os professores às disciplinas ministradas por eles, e, principalmente, visualizar relatórios com as avaliações de cada disciplina. Esses relatórios são fundamentais para análise de resultados e tomadas de decisões estratégicas para melhorar a qualidade do curso.
 \end{alineas}
 
 Esses atores desempenham papéis distintos no sistema de avaliação de disciplinas, e cada um contribui de uma maneira para o funcionamento do sistema.
 
+\subsection{Regras de negócio}
+As regras de negócio definem diretrizes e restrições de uma aplicação. Elas são essenciais para que haja clareza do que deve ser feito ao desenvolver um sistema, atendendo às necessidades e requisitos do negócio.
+
+Algumas das regras de negócio aplicadas ao sistema de avaliação de disciplinas são:
+
+\begin{alineas}
+  \item \textbf{RN1 - Restrição de matrícula} O Aluno só pode avaliar em que ele esteja matriculado: Não é permitido avaliar disciplinas não cursadas.
+  \item \textbf{RN2 - Restrição de avaliação única} O Aluno só pode avaliar uma disciplina uma única vez: Cada disciplina pode ser avaliada somente uma vez por cada aluno.
+  \item \textbf{RN3 - Restrição de anonimato} O Aluno não pode ser identificado na avaliação: A avaliação deverá ser anônima.
+  \item \textbf{RN4 - Restrição de acesso aos relatórios} O Professor pode visualizar somente os relatórios de suas disciplinas: Não é permitido acessar relatórios de outros professores.
+  \item \textbf{RN5 - Acesso do Coordenador aos relatórios} O Coordenador pode ver relatórios de todas as disciplinas: O Coordenador deve ter uma visão geral com todos os relatórios de avaliações das disciplinas do curso.
+  \item \textbf{RN6 - Cadastro de disciplinas} O Coordenador pode cadastrar disciplinas: Somente o Coordenador pode realizar cadastros de disciplinas e associar professores a elas.
+\end{alineas}
+
+Esses exemplos destacam algumas das regras de negócio cruciais para o funcionamento do sistema de avaliação de disciplinas. Ao seguir essas regras, é possível desenvolver uma aplicação segura, eficiente e que respeite a privacidade dos dados dos usuários.
 
 \subsection{Requisitos de sistema}
 Os requisitos de sistema são descrições sobre o que o sistema deve ser capaz de fazer para cumprir com as regras de negócios. Eles podem ser divididos em requisitos funcionais e não funcionais. Os requisitos funcionais são aqueles que o sistema deve ter para atender a necessidade do usuário final. Já os não funcionais devem apresentar as limitações do sistema desenvolvido.
