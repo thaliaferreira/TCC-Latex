@@ -2,6 +2,11 @@
 
 % falar sobre o capitulo
 
+Neste capítulo será apresentado o sistema proposto, sua motivação e modelagem.
+A seção 3.1 identificará a problemática acerca da avaliação do Ensino Superior sendo realizada de forma genérica, apontando a necessidade de uma avaliação interna automatizada;
+na seção 3.2, serão identificados sistemas que tenham a proposta semelhante com a deste projeto, bem como universidades que aplicam suas próprias avaliações.
+Enquanto na seção 3.3 será apresentada a modelagem da solução proposta, com base na problemática apresentada.
+
 \section{Motivação}
 
 % Intro
@@ -36,7 +41,7 @@ Segundo \citeonline{nelsonAbreu2009}, os processos avaliativos precisam envolver
 
 A melhoria dos sistemas de ensino superior em países em desenvolvimento requer uma autoavaliação. Nesse contexto, e de acordo com \citeonline{betts1992}, há a necessidade de desenvolver uma capacidade aumentada de autoreflexão, autodireção e autorrenovação no ambiente de ensino superior. Tornando-se fundamental que a avaliação institucional seja realizada de forma automatizada pelas próprias instituições de ensino.
 
-A utilização de sistemas e plataformas digitais permite que as universidades coletem, processem e analisem os dados de maneira precisa e eficiente, espeitando a privacidade dos alunos. Além disso, a automação desse processo reduz o tempo necessário para a obtenção dos resultados, permitindo que a instituição colete os dados quantitativos e qualitativos de maneira abrangente, envolvendo um maior número de estudantes.
+A utilização de sistemas e plataformas digitais permite que as universidades coletem, processem e analisem os dados de maneira precisa e eficiente, respeitando a privacidade dos alunos. Além disso, a automação desse processo reduz o tempo necessário para a obtenção dos resultados, permitindo que a instituição colete os dados quantitativos e qualitativos de maneira abrangente, envolvendo um maior número de estudantes.
 
 %\cite{braida2015transforming}
 %\citeonline{braida2015transforming}
@@ -44,7 +49,7 @@ A utilização de sistemas e plataformas digitais permite que as universidades c
 % justificar melhor o trabalho
 
 \section{Trabalhos Relacionados}
-Neste tópico serão apresentados alguns sistemas de avaliação aplicados por universidades e trabalhos acerca da avaliação institucional no ensino superior.
+% Neste tópico serão apresentados alguns sistemas de avaliação aplicados por universidades e trabalhos acerca da avaliação institucional no ensino superior.
 
 De uma maneira mais geral, temos o \textit{Rate my Professors}\footnote{\url{https://www.ratemyprofessors.com/}}, que foi criado
 com a motivação de ajudar outros estudantes universitários a tomar decisões informadas ao escolher suas aulas e professores, acreditando que as opiniões dos alunos poderiam ajudar futuros alunos, tornando a seleção de aulas e professores mais transparente e informada.
@@ -66,10 +71,9 @@ e servem como base para a reflexão acerca da qualidade do trabalho acadêmico r
 
 
 \section{Proposta}
+O intuito desse trabalho é desenvolver um sistema web de avaliação de disciplinas para o curso de Ciência da Computação da UFRRJ, com o objetivo de auxiliar o departamento do curso a tomar decisões que visem melhorar o ensino e aprendizado dos alunos.
 
-Esse capítulo propõe um sistema web de avaliação de disciplinas para o curso de Ciência da Computação da UFRRJ, com o objetivo de auxiliar o departamento do curso a tomar decisões que visem melhorar o ensino e aprendizado dos alunos.
-
-O intuito desse trabalho é desenvolver um sistema web onde os alunos da Universidade Federal Rural do Rio de Janeiro possam avaliar as disciplinas ofertadas ao longo do período. O sistema permite que os aluno acessem um questionário de avaliação para cada disciplina em que ele estava matriculado. Esse questionário conta com perguntas que podem medir a qualidade da didática do professor, a ementa da disciplina, as avaliações, entre outros.
+O sistema permite que os aluno acessem um questionário de avaliação para cada disciplina em que ele estava matriculado. Esse questionário conta com perguntas que podem medir a qualidade da didática do professor, a ementa da disciplina, as avaliações, entre outros.
 
 O sistema conta com uma tela de cadastro que pode ser usada tanto por alunos e professores da universidade e uma tela de login. Caso o usuário logado seja um aluno, ele poderá visualizar uma lista das disciplinas em que ele estava matriculado. O aluno pode avaliar cada disciplina dessa lista somente uma vez. Caso o usuário logado seja um professor, ele terá acesso a uma lista de disciplinas lecionadas por ele. Cada disciplina contará com um relatório com a média de avaliações recebidas. Caso o usuário seja um administrador, ele poderá acessar todas as disciplinas do curso de Ciência da Computação da UFRRJ, e visualizar o relatório de avaliações para cada uma delas.
 
@@ -213,13 +217,20 @@ Os casos de uso listados exemplificam algumas das interações e funcionalidades
 
 \subsection{Diagrama de Entidade-Relacionamento}
 
+O diagrama de entidade-relacionamento é usado para representar as entidades, seus atributos e seus relacionamentos, auxiliando na criação do banco de dados e servindo como base para o desenvolvimento do sistema. Assim, é possível analisar a estrutura da aplicação e identificar os relacionamentos entre as entidades.
+
+Na figura \ref{fig:fig_diagrama_er} podemos observar a representação gráfica do diagrama ER do sistema de avaliação de disciplinas.
+
+A aplicação possui entidades como Usuário, onde serão armazenados os usuários e seus respectivos perfis (Aluno, Professor ou Coordenador), Disciplina, Avaliação, Período e a tabela intermediária DisciplinaAluno. 
+
 \begin{figure}[h]
   \centering
   \includegraphics[width=1\textwidth]{imagens/diagrama-er.png}
   \caption{Diagrama ER}
-  \label{fig:fig_diagrama_classe}
-  \legend{Fonte: o autor.}
+  \label{fig:fig_diagrama_er}
+  %\legend{Fonte: o autor.}
 \end{figure}
+
 
 
 
