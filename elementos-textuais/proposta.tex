@@ -12,17 +12,13 @@ cujo objetivo é contribuir para a melhoria contínua dos cursos e instituiçõe
 os aspectos relacionados ao ensino, pesquisa, extensão, do corpo docente, da gestão institucional, bem como a responsabilidade social e infraestrutura.
 
 % Problema: SINAES mt abrangente
-% Solução: Sistema prórprio da universidade de avaliação
 
-A avaliação da qualidade do ensino superior é uma tarefa complexa que demanda a consideração de diversos fatores.
-Embora o SINAES desempenhe um papel importante nesse processo no Brasil,
-sua metodologia geral de avaliação é aplicada a todas as áreas do conhecimento,
-o que pode não levar em conta especificidades de determinadas áreas.
-Diante dessas limitações, sugere-se que as instituições e os órgãos de regulação estejam atentos a
-essas limitações e busquem complementar a avaliação do SINAES com outros mecanismos de avaliação mais específicos e adequados a cada caso. 
+A avaliação institucional desempenha um papel crucial na melhoria contínua da qualidade educacional
+e é uma tarefa complexa que demanda a consideração de vários fatores. Embora o SINAES seja fundamental para esse processo no Brasil, sua metodologia geral de avaliação é aplicada a todas as áreas do conhecimento, o que pode não levar em conta especificidades de determinadas áreas.
 
-% Entre as principais limitações, destacam-se a desigualdade de condições das instituições, as restrições dos instrumentos de avaliação, a ocorrência de problemas estruturais e as limitações do processo de avaliação.
-% Essas limitações podem comprometer a eficácia do SINAES como um sistema de avaliação da qualidade da educação superior no país, especialmente em casos específicos.
+% Problema: 
+
+Os discentes são os principais protagonistas desse processo, sendo diretamente impactados pelas disciplinas cursadas e pelos professores que as ministraram. Ao avaliar esses elementos, os estudantes podem manifestar suas opiniões, pontuar se o conteúdo está alinhado às expectativas e se é relevante para sua formação. Além disso, uma avaliação do professor possibilita uma análise aprofundada do seu desempenho, levando em conta didática, comunicação e capacidade de estimular o interesse do aluno.
 
 % Mas pq um sistema web? %
 % -> Privacidade do aluno ao dar o feedback
@@ -30,16 +26,13 @@ essas limitações e busquem complementar a avaliação do SINAES com outros mec
 % -> Acompanhamento em tempo real 
 % -> Fácil acesso
 
-É importante que os alunos sejam incentivados a fornecer feedback honesto e construtivo
-sobre a qualidade de ensino e a experiência educacional que recebe. Isso pode ser feito por meio de pesquisas de satisfação, questionários ou grupos de discussão.
-Visando tanto a privacidade do aluno, quanto a 
-
-
+% Solução: Sistema próprio da universidade de avaliação
 
 Para que a instituição esteja preparada para enfrentar desafios, é fundamental que seus membros tenham ciência de sua realidade, virtudes, capacidades e limitações.
 %Nelson de Abreu Júnio[2] (2009)
-Segundo \citeonline{nelsonAbreu2009}, os processos avaliativos precisam envolver o maior número de participantes, tanto na construção de seu projeto quanto na análise e no uso dos resultados, contribuindo para o desenvolvimento humano. Desta forma, e com base no diagnóstico de suas condições, a tomada de decisões poderá ser feita de maneira ética. 
+Segundo \citeonline{nelsonAbreu2009}, os processos avaliativos precisam envolver o maior número de participantes, tanto na construção de seu projeto quanto na análise e no uso dos resultados, contribuindo para o desenvolvimento humano.
 
+Nesse contexto, é fundamental que a avaliação institucional seja realizada de forma automatizada pelas próprias instituições de ensino. A utilização de sistemas e plataformas digitais permite que as universidades coletem, processem e analisem os dados de maneira precisa e eficiente, espeitando a privacidade dos alunos. Além disso, a automação desse processo reduz o tempo necessário para a obtenção dos resultados, permitindo que a instituição colete os dados quantitativos e qualitativos de maneira abrangente, envolvendo um maior número de estudantes.
 
 %\cite{braida2015transforming}
 %\citeonline{braida2015transforming}
@@ -159,7 +152,38 @@ Alguns casos de uso do sistema de avaliação de disciplina são:
 
 \begin{alineas}
     \item \textbf{Efetuar login}
+        \begin{alineas}
+            \item \textbf{Ator} Aluno, Professor ou Coordenador.
+            \item \textbf{Descrição} Autenticação de usuários cadastrados no sistema, permitindo a realização de operações restritas à cada perfil.
+        \end{alineas}
+    \item \textbf{Visualizar disciplinas}
+        \begin{alineas}
+            \item \textbf{Ator} Aluno, Professor ou Coordenador.
+            \item \textbf{Descrição} Visualização de informações das disciplinas: nome, turno, período letivo e professor.
+        \end{alineas}
+    \item \textbf{Avaliar disciplina}
+        \begin{alineas}
+            \item \textbf{Ator} Aluno.
+            \item \textbf{Descrição} Avaliação da disciplina cursada no período letivo atual.
+        \end{alineas}
+    \item \textbf{Cadastrar disciplina}
+        \begin{alineas}
+            \item \textbf{Ator} Coordenador.
+            \item \textbf{Descrição} Cadastro de uma disciplina no sistema informando NOME, PERÍODO LETIVO, TURNO e PROFESSOR.
+        \end{alineas}
+    \item \textbf{Cadastrar período}
+        \begin{alineas}
+            \item \textbf{Ator} Coordenador.
+            \item \textbf{Descrição} Cadastro de período letivo no sistema informando ANO.
+        \end{alineas}
+    \item \textbf{Visualizar relatórios}
+        \begin{alineas}
+            \item \textbf{Ator} Coordenador ou Professor.
+            \item \textbf{Descrição} Visualização de relatórios das avaliações feitas pelos alunos da disciplina.
+        \end{alineas}
 \end{alineas}
+
+Os casos de uso listados exemplificam algumas das interações e funcionalidades mais importantes da aplicação.
 
 \begin{comment}
     \begin{table}[h]
