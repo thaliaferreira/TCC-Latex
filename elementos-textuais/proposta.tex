@@ -2,17 +2,16 @@
 
 % falar sobre o capitulo
 
-Neste capítulo será apresentado o sistema proposto, sua motivação e modelagem.
-A seção 3.1 identificará a problemática acerca da avaliação do Ensino Superior sendo realizada de forma genérica, apontando a necessidade de uma avaliação interna automatizada;
-na seção 3.2, serão identificados sistemas que tenham a proposta semelhante com a deste projeto, bem como universidades que aplicam suas próprias avaliações.
-Enquanto na seção 3.3 será apresentada a modelagem da solução proposta, com base na problemática apresentada.
+Este capítulo é responsável por apresentar o sistema proposto, sua motivação e modelagem.
+A seção \ref{sec:motivacao} identificará a problemática acerca da avaliação do Ensino Superior sendo realizada de forma genérica, sugerindo a necessidade de uma avaliação interna e automatizada. Já na seção \ref{sec:trab_relacionados}, serão identificados sistemas que tenham a proposta semelhante com a deste projeto, bem como universidades que aplicam suas próprias avaliações. Enquanto a seção \ref{sec:proposta} apresentará a modelagem da solução proposta.
 
 \section{Motivação}
+\label{sec:motivacao}
 
 % Intro
 % SINAES
 
-No Brasil, desde 2004 por meio da Lei n° 10.861 as instituições de ensino superior devem estar de acordo com as normas do Sistema Nacional de Avaliação da Educação Superior (SINAES)
+No Brasil, por meio da \citeonline{lei10861} as instituições de ensino superior devem estar de acordo com as normas do Sistema Nacional de Avaliação da Educação Superior (SINAES)
 cujo objetivo é contribuir para a melhoria contínua dos cursos e instituições avaliando 
 os aspectos relacionados ao ensino, pesquisa, extensão, do corpo docente, da gestão institucional, bem como a responsabilidade social e infraestrutura.
 
@@ -31,15 +30,18 @@ Os discentes são os principais protagonistas desse processo, sendo diretamente 
 % -> Acompanhamento em tempo real 
 % -> Fácil acesso
 
+% Introdução da Solução: Sistema próprio da universidade de avaliação
+
+Para que a instituição esteja preparada para enfrentar desafios, é necessário que seus membros tenham ciência de sua realidade, virtudes, capacidades e limitações.
+%Nelson de Abreu Júnio[2] (2009)
+De acordo com \citeonline{junior_2009}, os processos avaliativos precisam envolver o maior número de participantes, tanto na construção de seu projeto quanto na análise e no uso dos resultados, contribuindo para o desenvolvimento humano.
+
 % Solução: Sistema próprio da universidade de avaliação
 
-Não restam dúvidas quanto à relevância das universidades no progresso do país, sendo necessário uma administração adequada e alinhada às exigências. Nesse sentido, as universidades devem se esforçar para estabelecer um sistema interno de garantia da qualidade que, na verdade, forneça uma base genuína para a tomada de decisões gerenciais. \citeonline{selfEvaluation2012}
+Não restam dúvidas quanto à importância das universidades no desenvolvimento do país, sendo fundamental uma administração adequada e alinhada às suas necessidades. Nesse sentido, e como afirmaram \citeonline{selfEvaluation2012}, as instituições devem se esforçar para estabelecer um sistema interno de garantia da qualidade que forneça uma base genuína para a tomada de decisões de gestão. 
+% A melhoria dos sistemas de ensino superior em países em desenvolvimento requer uma autoavaliação. Nesse contexto, e de acordo com \citeonline{betts1992}, há a necessidade de desenvolver uma capacidade aumentada de autoreflexão, autodireção e autorrenovação no ambiente de ensino superior. Tornando-se fundamental que a 
 
-Para que a instituição esteja preparada para enfrentar desafios, é fundamental que seus membros tenham ciência de sua realidade, virtudes, capacidades e limitações.
-%Nelson de Abreu Júnio[2] (2009)
-Segundo \citeonline{nelsonAbreu2009}, os processos avaliativos precisam envolver o maior número de participantes, tanto na construção de seu projeto quanto na análise e no uso dos resultados, contribuindo para o desenvolvimento humano.
-
-A melhoria dos sistemas de ensino superior em países em desenvolvimento requer uma autoavaliação. Nesse contexto, e de acordo com \citeonline{betts1992}, há a necessidade de desenvolver uma capacidade aumentada de autoreflexão, autodireção e autorrenovação no ambiente de ensino superior. Tornando-se fundamental que a avaliação institucional seja realizada de forma automatizada pelas próprias instituições de ensino.
+Atualmente, estamos imersos em um contexto em que a tecnologia se tornou onipresente, desempenhando um papel indispensável em nossas vidas e influenciando para além de nossas atividades cotidianas. Considerando essa realidade, torna-se essencial que essa avaliação institucional realizada pelas próprias instituições de ensino seja realizada de forma automatizada. 
 
 A utilização de sistemas e plataformas digitais permite que as universidades coletem, processem e analisem os dados de maneira precisa e eficiente, respeitando a privacidade dos alunos. Além disso, a automação desse processo reduz o tempo necessário para a obtenção dos resultados, permitindo que a instituição colete os dados quantitativos e qualitativos de maneira abrangente, envolvendo um maior número de estudantes.
 
@@ -49,35 +51,71 @@ A utilização de sistemas e plataformas digitais permite que as universidades c
 % justificar melhor o trabalho
 
 \section{Trabalhos Relacionados}
+\label{sec:trab_relacionados}
 % Neste tópico serão apresentados alguns sistemas de avaliação aplicados por universidades e trabalhos acerca da avaliação institucional no ensino superior.
 
-De uma maneira mais geral, temos o \textit{Rate my Professors}\footnote{\url{https://www.ratemyprofessors.com/}}, que foi criado
-com a motivação de ajudar outros estudantes universitários a tomar decisões informadas ao escolher suas aulas e professores, acreditando que as opiniões dos alunos poderiam ajudar futuros alunos, tornando a seleção de aulas e professores mais transparente e informada.
+De uma maneira mais geral, temos o 
+\textit{Rate my Professors}\footnote{\url{https://www.ratemyprofessors.com/}}, 
+um dos \textit{websites} mais populares nos Estados Unidos para que os estudantes possam pesquisar e avaliar professores e universidades. Esse recurso foi desenvolvido com o intuito de auxiliar outros estudantes universitários em suas decisões ao escolherem suas aulas e professores, com o objetivo de que as opiniões dos discentes poderiam beneficiar futuros estudantes, promovendo assim uma seleção mais transparente e embasada. O \textit{site} proporciona um \textit{feedback} dos usuários sobre a metodologia de ensino dos professores e suas disciplinas, incluindo uma avaliação das instalações dos campi universitários. Vale ressaltar que apenas os alunos que tenham frequentado uma aula do professor em questão ou que estejam atualmente matriculados nessa disciplina são autorizados a compartilhar suas avaliações, sendo limitados a um único comentário.
 
-A Universidade Federal Fluminense (UFF) possui a Comissão Própria de Avaliação Institucional da UFF (CPA/UFF),
-responsável pela formulação do instrumento de avaliação da Universidade, conhecido como Sistema de Avaliação Institucional (SAI).
+% que foi criado com a motivação de ajudar outros estudantes universitários a tomar decisões informadas ao escolher suas aulas e professores, acreditando que as opiniões dos alunos poderiam ajudar futuros alunos, tornando a seleção de aulas e professores mais transparente e informada.
+
+Já no contexto brasileiro, a Universidade Federal Fluminense (UFF) possui a Comissão Própria de Avaliação Institucional da UFF (CPA/UFF),
+responsável pela formulação do instrumento de avaliação da Universidade, conhecido como Sistema de Avaliação Institucional (SAI)\footnote{\url{https://app.uff.br/sai}}.
 O SAI foi desenvolvido com o propósito de coletar a perspectiva dos alunos e professores sobre os cursos de graduação,
 mediante a avaliação do desempenho efetivo nas disciplinas e da disponibilidade de infraestrutura para o seu funcionamento.
 Os resultados obtidos por meio dessa avaliação são analisados pela CPA/UFF, pelas Unidades Acadêmicas, pelos Departamentos de Ensino e pelas Coordenações de Curso,
 e servem como base para a reflexão acerca da qualidade do trabalho acadêmico realizado na UFF, gerando informações relevantes e necessárias para a reformulação dos Projetos Pedagógicos dos Cursos.
 
-
-
-% Falar sobre universidades que aplicam avaliações internas:
-% Exemplo: 
-% Universidad de Buenos Aires (UBA)
-% Universidade de São Paulo (USP) = Avaliação Institucional da USP
-% Universidade Federal FLuminense (UFF) = Avaliação Institucional da UFF
-
+Falar sobre universidades que aplicam avaliações internas:
+ Exemplo: 
+ Universidad de Buenos Aires (UBA)
+ Universidade de São Paulo (USP) = Avaliação Institucional da USP
+     Universidade Federal FLuminense (UFF) = Avaliação Institucional da UFF
 
 \section{Proposta}
-O intuito desse trabalho é desenvolver um sistema web de avaliação de disciplinas para o curso de Ciência da Computação da UFRRJ, com o objetivo de auxiliar o departamento do curso a tomar decisões que visem melhorar o ensino e aprendizado dos alunos.
+\label{sec:proposta}
+
+% intro + o que é o projeto 
+Conforme supracitado, a qualidade do ensino é um elemento crucial para o desenvolvimento dos estudantes e para o aprimoramento das instituições de ensino. Visando promover uma educação cada vez mais eficiente e participativa, este trabalho propõe o desenvolvimento de um sistema \textit{web} de avaliação de disciplinas para o curso de Ciência da Computação da Universidade Federal Rural do Rio de Janeiro - Instituto Multidisciplinar (UFRRJ/IM), com o objetivo de oferecer \textit{feedback} periódico e valioso para o aperfeiçoamento contínuo do processo educacional e viabilizando uma relação de transparência e qualidade no ambiente acadêmico.
+
+%objetivos 
+
+O projeto tem como objetivo analisar o desempenho das disciplinas ofertadas no período letivo decorrido, coletando informações sobre a eficácia, organização e relevância. Os alunos serão estimulados a avaliar aspectos como o conteúdo ministrado, a metodologia aplicada, avaliações e recursos didáticos afim de identificar pontos fortes e fracos de cada uma bem como examinar a atuação dos professores, buscando avaliar o desempenhos dos professores no processo de ensino-aprendizagem, serão considerados critérios como o domínio sobre a matéria, didática, clareza sobre a ementa, comunicação compreensiva, disponibilidade e capacidade de manter os alunos motivados.
+
+% metodologia
+
+Para a realização da avaliação, foi desenvolvida uma plataforma \textit{online} que permite aos alunos expressar suas opiniões de forma segura e anônima e aos professores e gestores acompanhar as métricas através de uma análise das avaliações. Os resultados serão apresentados de maneira estruturada e compreensível em um \textit{dashboard}, que permitirá que os professores acompanhem suas próprias avaliações e que os coordenadores tenham acesso às avaliações do corpo docente sob o qual é responsável.
+
+Foram elaborados questionários estruturados que abordam os diferentes aspectos relacionados às disciplinas cursadas e aos professores que as ministraram. Os questionários são compostos com questões de escalas de avaliação de 1 a 5 (sendo 1 muito ruim e 5 muito bom) e campos de comentários abertos tanto de sugestões quanto para a identificação de pontos positivos e negativos. É importante ressaltar a confidencialidade das respostas dos estudantes. O sistema garantirá o anonimato dos discentes, encorajando a participação franca e honesta permitindo que os estudantes sintam-se a vontade para expressar suas opiniões de forma livre e sem receio de represálias.
+
+%A plataforma também disponibilizará uma análise das avaliações. Os resultados serão apresentados de maneira estruturada e compreensível em um \textit{dashboard}, que permitirá que os professores acompanhem suas próprias avaliações e que os coordenadores tenham acesso às avaliações do corpo docente sob o qual é responsável.
+
+Os professores terão acesso a uma visão geral das avaliações recebidas em suas disciplinas. 
+%Para os professores, o \textit{dashboard} irá fornecer uma visão geral das avaliações recebidas em suas disciplinas. 
+Eles conseguirão visualizar os resultados de forma consolidada, como médias e comentários feitos pelos discentes, podendo compreender com mais clareza o \textit{feedback} recebido e identificar áreas de destaque e oportunidade de melhorias, além de admitir uma análise com avaliações anteriores e com as médias da instituição. Já para os coordenadores será disponibilizada uma análise mais abrangente, tendo acesso às avaliações dos professores sob sua responsabilidade, permitindo uma análise comparativa e um acompanhamento mais efetivo do desempenho docente. 
+
+Essa iniciativa busca fortalecer o diálogo entre alunos e instituição, disponibilizando avaliações de disciplinas e professores, bem como sua análise, para a comunidade acadêmica. O objetivo é aprimorar o gerenciamento das informações, promover transparência, autoaperfeiçoamento docente e demonstrar o compromisso da universidade em atender as necessidades e expectativas dos estudantes com base em dados.% A seguir serão apresentados informações mais detalhadas sobre o planejamento e desenvolvimento do Sistema de Avaliação de Disciplinas.
+
+
+%% Falar um pouco + a fundo das métricas usadas (?)
+% escala de 5(?) estrelas sendo 1(mt ruim) e 5(mt bom) ok
+% Exemplo do questionároi (?)
+
+
+
+
+
+
+\begin{comment}
+O intuito desse trabalho é desenvolver um sistema web de avaliação de disciplinas para o curso de Ciência da Computação da Universidade Federal Rural do Rio de Janeiro - Instituto Multidisciplinar (UFRRJ/IM), com o objetivo de auxiliar o departamento do curso a tomar decisões que visem melhorar o ensino e aprendizado dos alunos.
 
 O sistema permite que os aluno acessem um questionário de avaliação para cada disciplina em que ele estava matriculado. Esse questionário conta com perguntas que podem medir a qualidade da didática do professor, a ementa da disciplina, as avaliações, entre outros.
 
 O sistema conta com uma tela de cadastro que pode ser usada tanto por alunos e professores da universidade e uma tela de login. Caso o usuário logado seja um aluno, ele poderá visualizar uma lista das disciplinas em que ele estava matriculado. O aluno pode avaliar cada disciplina dessa lista somente uma vez. Caso o usuário logado seja um professor, ele terá acesso a uma lista de disciplinas lecionadas por ele. Cada disciplina contará com um relatório com a média de avaliações recebidas. Caso o usuário seja um administrador, ele poderá acessar todas as disciplinas do curso de Ciência da Computação da UFRRJ, e visualizar o relatório de avaliações para cada uma delas.
 
 Administradores do sistema poderão cadastrar períodos e disciplinas, e associar os professores a suas respectivas disciplinas. 
+\end{comment}
 
 \subsection{Atores}
 Um ator é uma entidade externa que interage com o sistema e desempenha um papel específico dentro do contexto do sistema em análise.
@@ -87,9 +125,9 @@ Ao identificar os atores, é possível determinar quais são as suas responsabil
 Com base na proposta apresentada anteriormente, é possível identificar os seguintes atores:
 
 \begin{alineas}
-  \item Aluno: Representa os alunos do curso de Ciência da Computação. Eles podem visualizar a lista de disciplinas em que estão matriculados e avaliá-las uma vez.
-  \item Professor: Representa os professores responsáveis pelas disciplinas do curso. Eles podem visualizar as disciplinas que lecionam e um relatório com as avaliações recebidas para cada uma delas.
-  \item Coordenador: Representa o(s) coordenador(es) do curso. Eles têm a responsabilidade de cadastrar disciplinas, associar os professores às disciplinas ministradas por eles, e, principalmente, visualizar relatórios com as avaliações de cada disciplina. Esses relatórios são fundamentais para análise de resultados e tomadas de decisões estratégicas para melhorar a qualidade do curso.
+  \item \textbf{Aluno}: Representa os alunos do curso de Ciência da Computação. Eles podem visualizar a lista de disciplinas em que estão matriculados e avaliá-las uma vez, após o encerramento do período letivo.
+  \item \textbf{Professor}: Representa os professores responsáveis pelas disciplinas do curso. Eles podem visualizar as disciplinas que lecionam e acompanhar um relatório com as avaliações recebidas para cada uma delas.
+  \item \textbf{Coordenador}: Representa o(s) coordenador(es) do curso. Eles têm a responsabilidade de cadastrar disciplinas, associar os professores às disciplinas ministradas por eles, e, principalmente, visualizar relatórios com as avaliações de cada disciplina. Esses relatórios são fundamentais para análise de resultados e tomadas de decisões estratégicas para melhorar a qualidade do curso.
 \end{alineas}
 
 Esses atores desempenham papéis distintos no sistema de avaliação de disciplinas, e cada um contribui de uma maneira para o funcionamento do sistema.
