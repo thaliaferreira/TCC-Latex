@@ -45,6 +45,8 @@ Atualmente, estamos imersos em um contexto em que a tecnologia se tornou onipres
 
 A utilização de sistemas e plataformas digitais permite que as universidades coletem, processem e analisem os dados de maneira precisa e eficiente, respeitando a privacidade dos alunos. Além disso, a automação desse processo reduz o tempo necessário para a obtenção dos resultados, permitindo que a instituição colete os dados quantitativos e qualitativos de maneira abrangente, envolvendo um maior número de estudantes.
 
+% TODO: Talvez seja interessante amarrar esse texto que vocês fizeram com o objetivo do seu trabalho. Algo simplório.
+
 %\cite{braida2015transforming}
 %\citeonline{braida2015transforming}
 
@@ -87,7 +89,7 @@ O projeto tem como objetivo analisar o desempenho das disciplinas ofertadas no p
 
 Para a realização da avaliação, foi desenvolvida uma plataforma \textit{online} que permite aos alunos expressar suas opiniões de forma segura e anônima e aos professores e gestores acompanhar as métricas através de uma análise das avaliações. Os resultados serão apresentados de maneira estruturada e compreensível em um \textit{dashboard}, que permitirá que os professores acompanhem suas próprias avaliações e que os coordenadores tenham acesso às avaliações do corpo docente sob o qual é responsável.
 
-Foram elaborados questionários estruturados que abordam os diferentes aspectos relacionados às disciplinas cursadas e aos professores que as ministraram. Os questionários são compostos com questões de escalas de avaliação de 1 a 5 (sendo 1 muito ruim e 5 muito bom) e campos de comentários abertos tanto de sugestões quanto para a identificação de pontos positivos e negativos. É importante ressaltar a confidencialidade das respostas dos estudantes. O sistema garantirá o anonimato dos discentes, encorajando a participação franca e honesta permitindo que os estudantes sintam-se a vontade para expressar suas opiniões de forma livre e sem receio de represálias.
+Foram elaborados questionários estruturados que abordam os diferentes aspectos relacionados às disciplinas cursadas e aos professores que as ministraram. Os questionários são compostos com questões de escalas de avaliação de 1 a 5, sendo 1 muito ruim e 5 muito bom, e campos de comentários abertos tanto de sugestões quanto para a identificação de pontos positivos e negativos. É importante ressaltar a confidencialidade das respostas dos estudantes. O sistema garantirá o anonimato dos discentes, encorajando a participação franca e honesta permitindo que os estudantes sintam-se a vontade para expressar suas opiniões de forma livre e sem receio de represálias.
 
 %A plataforma também disponibilizará uma análise das avaliações. Os resultados serão apresentados de maneira estruturada e compreensível em um \textit{dashboard}, que permitirá que os professores acompanhem suas próprias avaliações e que os coordenadores tenham acesso às avaliações do corpo docente sob o qual é responsável.
 
@@ -118,24 +120,28 @@ Administradores do sistema poderão cadastrar períodos e disciplinas, e associa
 \end{comment}
 
 \subsection{Atores}
-Um ator é uma entidade externa que interage com o sistema e desempenha um papel específico dentro do contexto do sistema em análise.
-
-Ao identificar os atores, é possível determinar quais são as suas responsabilidades e como eles se relacionam com as funcionalidades do sistema. Essas informações são utilizadas para modelar os casos de uso e requisitos do sistema.
+Um ator é uma entidade externa que interage com o sistema e desempenha um papel específico dentro do contexto do sistema em análise. Ao identificar os atores, é possível determinar quais são as suas responsabilidades e como eles se relacionam com as funcionalidades do sistema. Essas informações são utilizadas para modelar os casos de uso e requisitos do sistema.
 
 Com base na proposta apresentada anteriormente, é possível identificar os seguintes atores:
 
 \begin{alineas}
-  \item \textbf{Aluno}: Representa os alunos do curso de Ciência da Computação. Eles podem visualizar a lista de disciplinas em que estão matriculados e avaliá-las uma vez, após o encerramento do período letivo.
-  \item \textbf{Professor}: Representa os professores responsáveis pelas disciplinas do curso. Eles podem visualizar as disciplinas que lecionam e acompanhar um relatório com as avaliações recebidas para cada uma delas.
-  \item \textbf{Coordenador}: Representa o(s) coordenador(es) do curso. Eles têm a responsabilidade de cadastrar disciplinas, associar os professores às disciplinas ministradas por eles, e, principalmente, visualizar relatórios com as avaliações de cada disciplina. Esses relatórios são fundamentais para análise de resultados e tomadas de decisões estratégicas para melhorar a qualidade do curso.
+  \item \textbf{Aluno} Representa os alunos do curso de Ciência da Computação. Eles podem visualizar a lista de disciplinas em que estão matriculados e avaliá-las uma vez, após o encerramento do período letivo.
+  \item \textbf{Professor} Representa os professores responsáveis pelas disciplinas do curso. Eles podem visualizar as disciplinas que lecionam e acompanhar um relatório com as avaliações recebidas para cada uma delas.
+  \item \textbf{Coordenador} Representa o(s) coordenador(es) do curso. Eles têm a responsabilidade de cadastrar disciplinas, associar os professores às disciplinas ministradas por eles, e, principalmente, visualizar relatórios com as avaliações de cada disciplina. Esses relatórios são fundamentais para análise de resultados e tomadas de decisões estratégicas para melhorar a qualidade do curso.
 \end{alineas}
 
 Esses atores desempenham papéis distintos no sistema de avaliação de disciplinas, e cada um contribui de uma maneira para o funcionamento do sistema.
+
+\subsection{Questionário}
+
+Falar sobre o questionário.
 
 \subsection{Regras de Negócio}
 As regras de negócio definem diretrizes e restrições de uma aplicação. Elas são essenciais para que haja clareza do que deve ser feito ao desenvolver um sistema, atendendo às necessidades e requisitos do negócio.
 
 Algumas das regras de negócio aplicadas ao sistema de avaliação de disciplinas são:
+
+% escrever mais regras de negócio
 
 \begin{alineas}
   \item \textbf{RN1 - Restrição de matrícula} O Aluno só pode avaliar em que ele esteja matriculado: Não é permitido avaliar disciplinas não cursadas.
@@ -155,44 +161,25 @@ Os requisitos funcionais especificam funcionalidades que o sistema deve ter para
 
 Alguns requisitos funcionais do sistema de avaliação de disciplina são:
 
+% escrever mais requisitos
+
 \begin{alineas}
-    \item \textbf{RF1 - Cadastrar disciplina} O sistema permitirá que o Coordenador cadastre disciplinas informando NOME, TURNO, PROFESSOR e PERÍODO LETIVO.
-    \item \textbf{RF2 - Editar disciplina} O sistema permitirá que o Coordenador edite o NOME, TURNO, PROFESSOR e PERÍODO LETIVO de uma disciplina.
-    \item \textbf{RF3 - Excluir disciplina} O sistema permitirá que o Coordenador exclua uma disciplina.
-    \item \textbf{RF4 - Listar disciplinas} O sistema permitirá a visualização de disciplinas (NOME, TURNO, PROFESSOR e PERÍODO LETIVO).
-    \item \textbf{RF5 - Cadastrar período} O sistema permitirá que o Coordenador inclua um período letivo (ANO).
-    \item \textbf{RF6 - Editar período} O sistema permitirá que o Coordenador edite o ano de um período letivo cadastrado no sistema.
-    \item \textbf{RF7 - Excluir período} O sistema permitirá que o Coordenador exclua um período letivo.
-    \item \textbf{RF8 - Visualizar relatórios} O sistema permitirá a visualização de relatórios de avaliações.
+    \item \textbf{RF1 - Cadastrar disciplina} O Coordenador poderá cadastrar disciplinas informando nome, turno, professor e período letivo.
+    \item \textbf{RF2 - Editar disciplina} O Coordenador poderá editar o nome, turno, professor e período letivo de uma disciplina.
+    \item \textbf{RF3 - Excluir disciplina} O Coordenador poderá excluir uma disciplina.
+    \item \textbf{RF4 - Listar disciplinas} O usuário poderá visualizar uma lista de disciplinas.
+    \item \textbf{RF5 - Cadastrar período} O Coordenador poderá incluir um período letivo informando o ano e o semestre.
+    \item \textbf{RF6 - Editar período} O Coordenador poderá editar o ano de um período letivo cadastrado no sistema.
+    \item \textbf{RF7 - Excluir período} O Coordenador poderá excluir um período letivo.
+    \item \textbf{RF8 - Visualizar relatórios} O Coordenador e o Professor poderão visualizar relatórios de avaliações.
 \end{alineas}
 
 Ao satisfazer todos os requisitos do sistema, podemos garantir que o software é confiável e funcional. 
 
-\begin{comment}
-    \begin{table}[h]
-        \centering
-        \caption{Requisitos do Sistema}
-        \label{tab:tabela_requisios_do_sistema}
-        \resizebox{\textwidth}{!}{%
-        \rowcolors{1}{}{lightlightgray}
-        \begin{tabular}{ccc}
-        \hline
-        \textbf{ID} & \textbf{Nome} & \textbf{Descrição} \\ \hline
-        \textbf{RF01} & Cadastrar disciplina & \begin{tabular}[c]{@{}c@{}}O sistema permiritá que o usuário inclua disciplina\\ informando NOME, TURNO, PROFESSOR, PERÍODO LETIVO\end{tabular} \\
-        \textbf{RF02} & Editar disciplina & \begin{tabular}[c]{@{}c@{}}O sistema permitirá que o usuário edite \\o NOME, TURNO, PROFESSOR e PERÍODO LETIVO de uma disciplina \end{tabular} \\
-        \textbf{RF03} & Excluir disciplina & O sistema permitirá que o usuário exclua uma disciplina \\
-        \textbf{RF04} & Listar disciplinas & \begin{tabular}[c]{@{}c@{}}O sistema permitirá a visualização de uma disciplina\\ (NOME, TURNO, PROFESSOR)\end{tabular} \\
-        \textbf{RF05} & Cadastrar período & O sistema permitirá que o usuário inclua um período letivo (ANO) \\
-        \textbf{RF06} & Editar período & \begin{tabular}[c]{@{}c@{}}O sistema permitirá que o usuário edite o ano \\ de um período letivo cadastrado no sistema\end{tabular} \\
-        \textbf{RF07} & Excluir período & O sistema permitirá que o usuário exclua um período letivo \\
-        \textbf{RF08} & Visualizar relatório & \begin{tabular}[c]{@{}c@{}}O sistema permitirá a visualização de \\ períodos letivos cadastrados no sistema\end{tabular}
-        \end{tabular}%
-        }
-    \end{table}
-\end{comment}
-
 \subsection{Casos de Uso}
 Os casos de uso representam interações entre os atores e o sistema. Eles documentam as principais funcionalidades do sistema do ponto de vista do usuário final. 
+
+% escrever corretamente os casos de uso
 
 Alguns casos de uso do sistema de avaliação de disciplina são:
 
@@ -231,45 +218,28 @@ Alguns casos de uso do sistema de avaliação de disciplina são:
 
 Os casos de uso listados exemplificam algumas das interações e funcionalidades mais importantes da aplicação.
 
-\begin{comment}
-    \begin{table}[h]
-        \centering
-        \caption{Casos de Uso}
-        \label{tab:tabela_casos_de_uso}
-        \resizebox{\textwidth}{!}{%
-        \rowcolors{1}{}{lightlightgray}
-        \begin{tabular}{cccc}
-        \hline
-        \textbf{ID} & \textbf{Nome} & \textbf{Ator} & \textbf{Descrição} \\ \hline
-        \textbf{UC01} & Efetuar login & \begin{tabular}[c]{@{}c@{}}Aluno, Coordenador\\ ou Professor\end{tabular} & \begin{tabular}[c]{@{}c@{}}Autenticação de usuários cadastrados no sistema,\\ permitindo a realização de operações restritas à cada perfil\end{tabular} \\
-        \textbf{UC02} & Cadatrar usuário & Coordenador & \begin{tabular}[c]{@{}c@{}}Inclusão no sistema usuários para  executar as operações de acordo \\ com o perfil (Aluno ou Professor)\end{tabular} \\
-        \textbf{UC03} & Visualizar disciplina & Aluno ou Professor & Visualização das informações da disciplina: Ano letivo, professor \\
-        \textbf{UC04} & Avaliar disciplina & Aluno & Avaliação da disciplina cursada no ano letivo em questão \\
-        \textbf{UC05} & Cadastrar disciplina & Coordenador & \begin{tabular}[c]{@{}c@{}}Cadastro de uma disciplina no sistema informando NOME, PERÍODO LETIVO, \\ TURNO e PROFESSOR\end{tabular} \\
-        \textbf{UC06} & Cadastrar período & Professor & Cadastro de ano letivo no sistema (ANO) \\
-        \textbf{UC07} & Visualizar relatório & Coordenador ou Professor & Visualização das avaliações feitas pelos alunos da disciplina
-        \end{tabular}%
-        }
-    \end{table}
-\end{comment}
-
 \subsection{Diagrama de Entidade-Relacionamento}
 
 O diagrama de entidade-relacionamento é usado para representar as entidades, seus atributos e seus relacionamentos, auxiliando na criação do banco de dados e servindo como base para o desenvolvimento do sistema. Assim, é possível analisar a estrutura da aplicação e identificar os relacionamentos entre as entidades.
 
-Na figura \ref{fig:fig_diagrama_er} podemos observar a representação gráfica do diagrama ER do sistema de avaliação de disciplinas.
-
-A aplicação possui entidades como Usuário, onde serão armazenados os usuários e seus respectivos perfis (Aluno, Professor ou Coordenador), Disciplina, Avaliação, Período e a tabela intermediária DisciplinaAluno. 
+Na figura \ref{fig:fig_diagrama_er} podemos observar a representação gráfica do diagrama ER do sistema de avaliação de disciplinas. Nesse diagrama, identificamos que a aplicação possui entidades como Usuário, onde serão armazenados os usuários e seus respectivos perfis (Aluno, Professor ou Coordenador), Disciplina, Avaliação, Período e a tabela intermediária DisciplinaAluno. 
 
 \begin{figure}[h]
   \centering
   \includegraphics[width=1\textwidth]{imagens/diagrama-er.png}
-  \caption{Diagrama ER}
+  \caption{Diagrama ER da aplicação proposta}
   \label{fig:fig_diagrama_er}
   %\legend{Fonte: o autor.}
 \end{figure}
 
 
+% Explicar melhor tomadas de decisao na entidas
+% Materias dividas em eriodos para saber onde
+% Por que perguntas fixas
+% (Falar mais do questionário de forma tecnica)
+%
+%
+%
 
 
 
