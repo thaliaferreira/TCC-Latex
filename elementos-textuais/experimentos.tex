@@ -7,17 +7,11 @@ Este capítulo falará da solução em execução, ou seja, quais ferramentas es
 Para o desenvolvimento da proposta, foi utilizado o \textit{framework} de \textit{frontend} Angular\footnote{\url{https://angular.io}} com Bootstrap\footnote{\url{https://getbootstrap.com}}, além do \textit{framework} AdonisJS\footnote{\url{https://adonisjs.com}}, construído em Node.js\footnote{\url{https://nodejs.org/en}}, no \textit{backend}. Para armazenamento de dados foi escolhido o SQLite\footnote{\url{https://www.sqlite.org/index.html}}, um sistema de gerenciamento de banco de dados relacional embutido, gratuito e de código aberto, que oferece integração com o Lucid, o ORM (\textit{Object-Relational Mapping}) utilizado pelo AdonisJS.
 
 \subsection{Angular}
-Angular é um \textit{framework} JavaScript de código aberto escrito em TypeScript e mantido pela Google. Ele é amplamente utilizado para desenvolver aplicações web baseadas em uma única página dinâmica, conhecidas também como SPAs (\textit{Single-Page Applications}).
+Angular é um \textit{framework} JavaScript de código aberto escrito em TypeScript e mantido pela Google. Ele é amplamente utilizado para desenvolver aplicações web baseadas em uma única página dinâmica, conhecidas também como SPAs (\textit{Single-Page Applications}). De acordo com \citeonline{ivanovs_2023}, o Angular é o segundo \textit{framework} \textit{frontend} mais utilizado no mundo desde 2016.
 
 O Angular foi o \textit{framework} escolhido para construir o \textit{frontend} da aplicação por vários motivos. Uma de suas principais vantagens é sua arquitetura modular, que permite que o sistema seja dividido em módulos independentes. Essa abordagem facilita a organização do código e torna-o reutilizável. 
 
-Outra vantagem é a sua arquitetura baseada em componentes, que permite criar interfaces interativas e reutilizáveis. 
-
-Além disso, sua ampla comunidade de desenvolvedores e o suporte contínuo oferecido pela Google são ótimas vantagens de utilizar o \textit{framework}, por facilitar a busca por soluções para desafios encontrados durante o desenvolvimento.
-
-%Pesquisa sobre Angular ser o 2 framework mais utilizado
-%https://stackdiary.com/front-end-frameworks/
-%como citar?
+Outra vantagem é a sua arquitetura baseada em componentes, que permite criar interfaces interativas e reutilizáveis. Além disso, sua ampla comunidade de desenvolvedores e o suporte contínuo oferecido pela Google são ótimas vantagens de utilizar o \textit{framework}, por facilitar a busca por soluções para desafios encontrados durante o desenvolvimento.
 
 \subsection{Bootstrap}
 
@@ -27,8 +21,28 @@ Algumas vantagens de utilizar o Bootstrap são: responsividade, já que os eleme
 
 \subsection{Node.js}
 
+O Node.js é um ambiente de execução de JavaScript do lado do servidor, o que significa que é possível executar aplicações Javascript fora do navegador. Ele utiliza o V8, conhecido também como \textit{Chrome’s V8 JavaScript engine}, um poderoso interpretador JavaScript desenvolvido pela Google que permite executar o código de forma assíncrona. O Node.js foi desenvolvido em 2009 por Ryan Dahl e, embora seja relativamente novo, é utilizado por grandes empresas como LinkedIn\footnote{\url{https://www.linkedin.com/}}, Netflix\footnote{\url{https://www.netflix.com/}}, Uber\footnote{\url{https://www.uber.com/}} e Trello\footnote{\url{https://trello.com/}}. \cite{brewster_2021}
+
+Dentre as vantagens de utilizar o Node.js estão o modelo I/O não bloqueante e orientado a objetos que permite lidar com uma grande quantidade de chamadas sem gerar bloqueios ou gargalos. Além disso, ele oferece o NPM (\textit{Node Package Manager}), um gerenciador de pacotes que disponibiliza diversos pacotes de código aberto e reutilizável.
+
+
 \subsection{AdonisJS}
+
+O AdonisJS é um \textit{framework} opinado para Node.js criado em 2015 com o objetivo de fornecer uma estrutura sólida e completa para o desenvolvimento de aplicações web escaláveis.
+
+Dentre as características notáveis do AdonisJS está seu padrão arquitetural MVC (\textit{Model-View-Controller}), que separa o código em modelos, visualizações e controladores, facilitando a manutenção e escalabilidade do código. Além disso, o AdonisJS oferece o Lucid ORM, um mapeador de objetos relacionais que oferece métodos prontos para simplificar a manipulação de banco de dados. O \textit{framework} também oferece recursos para autenticação, o que permite implementar métodos como login e cadastro de forma simples.
 
 \subsection{SQLite}
 
+O SQLite é um sistema de gerenciamento de banco de dados relacional embutido, gratuito e de código aberto. Diferente de sistemas como PostgreSQL\footnote{\url{https://www.postgresql.org}} e MySQL\footnote{\url{https://www.mysql.com}}, o SQLite funciona de forma independente e não necessita de um servidor.
+
+Existem várias vantagens em usar o SQLite. Primeiramente, ele é altamente portável, e está disponível em plataformas como Windows, macOS, Linux, iOS e Android. Além disso, ele é fácil de configurar e não requer instalação, já que o banco de dados é armazenado em um único arquivo. Comparado a outros sistemas de banco de dados, o SQLite possui um tamanho de biblioteca relativamente pequeno, ocupando cerca de 250KB, enquanto servidores como o MySQL podem chegar a 600MB. \cite{estrella_2023}
+
+No entando, é importante considerar algumas limitações do uso do SQLite. Dentre elas, a sua escalabilidade limitada, já que a biblioteca não é adequada para altas cargas. Além disso, o bloqueio do banco de dados em operações de gravação simultânea impacta o desempenho em cenários de intensa concorrência.
+
 \subsection{Ambiente de Desenvolvimento}
+
+Para o desenvolvimento da aplicação proposta utilizamos o Visual Studio Code\footnote{\url{https://code.visualstudio.com}}, um editor de código-fronte popular e versátil. De acordo com \citeonline{flow_2022}, o Visual Studio Code foi a ferramenta de edição de texto mais utilizada pelos desenvolvedores em 2022. Para gerenciamento do banco de dados, utilizamos o pacote MySQL\footnote{\url{https://dev.mysql.com/doc/visual-studio/en/visual-studio-code-editor.html}} do Visual Studio Code, que também oferece suporte para o SQLite. Para versionamento de código, a ferramenta escolhida foi o Git, uma ferramenta de versionamento utilizada por 93\% dos desenvolvedores. \cite{flow_2022}
+
+%Duas citações? Deixa uma só no final?
+%Quando usar cite? Quando usar citeonline?
