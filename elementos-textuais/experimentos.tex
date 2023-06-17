@@ -46,3 +46,71 @@ Para o desenvolvimento da aplicação proposta utilizamos o Visual Studio Code\f
 
 %Duas citações? Deixa uma só no final?
 %Quando usar cite? Quando usar citeonline?
+
+\section{Arquitetura do Sistema}
+
+Para desenvolvimento do sistema proposto foi utilizado o padrão de arquitetura MVC (\textit{Model-View-Controller}).  O padrão MVC divide o sistema em três camadas: \textit{Models} (Modelo), \textit{Views} (Visualização) e \textit{Controller} (Controlador).
+
+\subsection{\textit{Models}}
+
+Na arquitetura MVC, a camada \textit{Models} (Modelos) é a responsável por representar os dados e implementar as regras de negócio da aplicação. Ela encapsula os métodos responsáveis por acessar e manipular os dados da aplicação para leitura, criação, exclusão ou atualização. Além disso, a camada de Modelo interage com o banco de dados, realizando consultadas e atualizações, e retorna os dados requisitados pelo Controlador.
+
+No desenvolvimento da aplicação proposta, foram criados os seguintes modelos:
+
+\begin{alineas}
+    \item \textbf{Pessoa} O modelo de Pessoa representa as pessoas cadastradas no sistema. Ele é o responsável por indicar se a pessoa é um Professor, Aluno ou Coordenador. Esse modelo possui uma relação de muitos-para-muitos com o modelo Disciplina, indicando a lista de disciplinas acessíveis pelo Aluno. 
+    \item \textbf{Avaliação} O modelo de Avaliação representa as avaliação recebidas pelo sistema. Esse modelo se relaciona com o modelo de Disciplina, para indicar a disciplina avaliada, e com o modelo Pessoa, para indicar o Aluno que realizou a avaliação.
+    \item \textbf{Disciplina} O modelo de Disciplina representa as disciplinas cadastradas no sistema. Esse modelo se relaciona com o modelo de Pessoa para indicar o Professor responsável pela Disciplina, e com o modelo Período, para indicar o período letivo da disciplina.
+    \item \textbf{Período} O modelo de Período representa os períodos letivos cadastrados no sistema. Esse modelo possui uma relação de um-para-muitos com o modelo de Disciplinas, representando as Disciplinas ofertadas no período letivo.
+\end{alineas}
+
+No código da figura \ref{fig:fig_cod_model_avaliacao} é possível visualizar como foi desenvolvido o modelo de Avaliação, e suas relações com o modelo de Pessoa e Disciplina. Os modelos herdam da classe \textit{Model}, desenvolvida pelo Lucid\footnote{\url{https://legacy.adonisjs.com/docs/4.0/lucid}}, que oferece métodos de manipulação de dados.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=1\textwidth]{imagens/codigo-model-avaliacao.png}
+  \caption{Criação do Modelo de Avaliação}
+  \label{fig:fig_cod_model_avaliacao}
+\end{figure}
+
+\subsection{\textit{Views}}
+
+A camada de \textit{Views}, também conhecida como Visualização, é a responsável por gerar a interface de interação com o usuário. Nessa camada, os dados recebidos do Modelo são processados e apresentados para o usuário da aplicação de maneira interativa. Na arquitetura MVC, a \textit{View} é desacoplada da camada de \textit{Model} e \textit{Controller}, e não possui lógicas de negócio nem interage com a camada de dados.
+
+Para desenvolvimento da camada de Visualização na aplicação proposta utilizamos a biblioteca Bootstrap. A biblioteca disponibiliza classes prontas de CSS, o que facilita a criação de elementos como botões, tabelas e \textit{cards}. Além disso, a biblioteca oferece alguns recursos interativos como \textit{dropdowns} e modais. Com o Bootstap, podemos gerar interfaces com eficiência para renderizar dados de forma compreensível e intuitiva para os usuários.
+
+Dentre as principais \textit{Views} da aplicação está a tela de login, ilustrada na figura \ref{fig:fig_tela_login}. Nessa tela, o usuário pode se autenticar no sistema informando o e-mail e a senha. Caso o usuário não esteja cadastro no sistema ele pode clicar no botão \textbf{Realizar cadastro}, que irá redirecioná-lo para a tela de cadastro ilustrada na figura \ref{fig:fig_tela_cadastro}.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=1\textwidth]{imagens/tela-login.png}
+  \caption{Tela de login da aplicação proposta}
+  \label{fig:fig_tela_login}
+\end{figure}
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=1\textwidth]{imagens/tela-cadastro.png}
+  \caption{Tela de cadastro da aplicação proposta}
+  \label{fig:fig_tela_cadastro}
+\end{figure}
+
+Se o usuário for um Aluno, após se autenticar no sistema ele será redirecionado para a tela de lista de lista de disciplinas como ilustrado na figura \ref{fig:fig_tela_disciplinas_aluno}. Nessa tela, o aluno verá quais disciplinas ainda estão pendentes de avaliação. Caso a disciplina já tenha sido avaliada, o botão \textbf{Avaliar} estará desabilitado.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=1\textwidth]{imagens/tela-disciplinas-aluno.png}
+  \caption{Tela de lista de disciplinas do aluno}
+  \label{fig:fig_tela_disciplinas_aluno}
+\end{figure}
+
+
+\subsection{\textit{Controllers}}
+
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=1\textwidth]{imagens/codigo-controller-avaliacao.png}
+  \caption{Método de POST na Controller de Avaliação}
+  \label{fig:fig_cod_controller_avaliacao}
+\end{figure}

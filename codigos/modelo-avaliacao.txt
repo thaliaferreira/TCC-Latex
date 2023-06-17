@@ -1,0 +1,13 @@
+class Avaliacao extends Model {
+    static get table() {
+        return 'avaliacao';
+    }
+
+    pessoa() {
+        return this.belongsTo('App/Models/Pessoa', 'pessoa_id', 'id')
+    }
+
+    disciplina() {
+        return this.belongsTo('App/Models/Disciplina', 'disciplina_id', 'id')
+    }
+}

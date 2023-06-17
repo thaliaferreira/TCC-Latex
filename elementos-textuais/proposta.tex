@@ -135,13 +135,24 @@ Esses atores desempenham papéis distintos no sistema de avaliação de discipli
 \subsection{Questionário}
 
 %Falar sobre o questionário.
-O questionário de avaliação de disciplina e do docente foi elaborado para capturar informações pertinentes acerca da experiência dos estudantes em relação à disciplina cursada, permitindo a identificação de pontos fortes e áreas passíveis de aprimoramento.
+ 
+O questionário de avaliação de disciplina e do docente foi elaborado para capturar informações pertinentes acerca da experiência dos estudantes em relação à disciplina cursada, permitindo a identificação de pontos fortes e áreas passíveis de aprimoramento. Ele conta com sete questões avaliativas de escala, de 1 a 5, que abordam aspectos como didática, pontualidade, assiduidade, capacidade de cumprir a ementa, interdisciplinaridade e aplicação de avaliações e duas questões discursivas para que os alunos expressem suas opiniões de forma mais livre.
 
-Optamos pela utilização de um conjunto de questões pré definidas visando a padronização das respostas. Além disso, para assegurar que os objetivos da organização sejam atendidos de forma adequada. Outra vantagem é a comparabilidade dos resultados, sendo possível comparar diferentes disciplinas, professores e períodos letivos.
+Avaliar tais aspectos é importante para garantir a qualidade do ensino superior. Eles são cruciais uma vez que a didática eficaz ajuda na compreensão dos alunos, pontualidade e assiduidade demonstram respeito e comprometimento do docente para com os estudantes e com todo o processo educativo; o cumprimento da ementa garante que o curso está sendo ministrado corretamente de acordo com as expectativas e com os requisitos estabelecidos. Já a interdisciplinaridade enriquece o aprendizado, as avaliações são importantes para verificar o progresso dos alunos, e o conteúdo cobrado precisa ser relevante para a formação do aluno e estar alinhado com os objetivos do curso.
 
+Optamos pela utilização de um conjunto de questões pré definidas visando a padronização das respostas e, também, para assegurar que os objetivos da organização sejam atendidos de forma adequada. Outra vantagem é a comparabilidade dos resultados, sendo possível comparar diferentes disciplinas, professores e períodos letivos e auxiliar a administração acadêmica na tomada de decisões informadas e na implementação de ações corretivas efetivas.
 
-Questões:
-\begin{alineas}
+Ademais, o uso de um conjunto de questões padronizadas proporciona uma experiência mais consistente para os estudantes. Isso lhes permite ter uma noção clara do que esperar e responder às perguntas de forma mais direcionada, além de possibilitar a comparação de suas experiências em diferentes disciplinas. Oferecendo, assim, uma perspectiva mais abrangente sobre a qualidade do ensino na universidade.
+
+Dessa forma, a seguir apresentamos as sete questões utilizadas no sistema de avaliação de disciplina proposto:
+
+%Optamos pela utilização de um conjunto de questões pré definidas visando a padronização das respostas e, também, para assegurar que os objetivos da organização sejam atendidos de forma adequada. Outra vantagem é a comparabilidade dos resultados, sendo possível equiparar diferentes disciplinas, professores e períodos letivos e auxiliar a administração acadêmica na tomada de decisões informadas e na implementação de ações corretivas efetivas.
+
+%Ademais, o uso de um conjunto de questões padronizadas proporciona uma experiência mais consistente para os estudantes. Isso lhes permite ter uma noção clara do que esperar e responder às perguntas de forma mais direcionada, além de possibilitar a comparação de suas experiências em diferentes disciplinas. Oferecendo, assim, uma perspectiva mais abrangente sobre a qualidade do ensino na universidade.
+
+%A seguir, listamos as questões presentes no questionário de avaliação:
+
+\begin{enumerate}
 \item Com base no período corrente quanto você avalia que foi a didática do(a) professor(a)?
 \item Com base no período corrente quanto você avalia que foi a pontualidade do(a) professor(a)?
 \item Com base no período corrente quanto você avalia que foi a assiduidade do(a) professor(a)?
@@ -149,9 +160,13 @@ Questões:
 \item Você conseguiu perceber, com base nas aulas do(a) professor(a) a interdiciplinalidade do conteúdo dado?
 \item Com base no período corrente quanto você avalia que foram as avaliações (trabalhos, provas, teste, etc) do(a) professor(a)?
 \item Com base no período corrente quanto você avalia a forma de cobrar o conteúdo dado pelo(a) professor(a)?
-\item Faça uma breve descrição dos pontos positivos percebidos nessa disciplina:
-\item Faça uma breve descrição dos pontos negativos percebidos nessa disciplina:
-\end{alineas}
+\end{enumerate}
+
+E aqui estão as questões onde o aluno pode se expressar com suas palavras:
+\begin{enumerate}
+\item Faça uma breve descrição dos pontos positivos percebidos nessa disciplina
+\item Faça uma breve descrição dos pontos negativos percebidos nessa disciplina
+\end{enumerate}
 
 
 \subsection{Regras de Negócio}
@@ -159,14 +174,112 @@ As regras de negócio definem diretrizes e restrições de uma aplicação. Elas
 
 % escrever mais regras de negócio
 
-\begin{alineas}
-  \item \textbf{RN1 - Restrição de matrícula} O Aluno só pode avaliar em que ele esteja matriculado: Não é permitido avaliar disciplinas não cursadas.
-  \item \textbf{RN2 - Restrição de avaliação única} O Aluno só pode avaliar uma disciplina uma única vez: Cada disciplina pode ser avaliada somente uma vez por cada aluno.
+\begin{description}
+%RN1
+  \item \textbf{RN01 - Usuários autenticados podem interagir com o sistema}
+
+  \begin{description}
+    \item \textbf{Descrição} Ao acessar o sistema, todos os usuários devem informar suas credenciais de acesso. Somente após a autenticação bem-sucedida, eles terão permissão para interagir com as funcionalidades e recursos do sistema.  
+  \end{description}
+  
+  %\textbf{Regras relacionadas} -
+
+  %%%%%%%%%%%%%%%% aluno %%%%%%%%%%%%%%%%
+  
+% RN2
+  \item \textbf{RN02 - Usuários registrados como aluno podem avaliar disciplinas} 
+
+  \begin{description}
+      \item \textbf{Descrição} Apenas usuários com perfil aluno no sistema tem acesso ao questionário de avaliação de disciplina. Caso o usuário possua um perfil diferente de aluno, essa funcionalidade não estará disponível.
+  \end{description}
+    
+  %\textbf{Regras relacionadas} -
+
+% RN3
+    \item \textbf{RN03 - Alunos só podem avaliar disciplinas que cursaram no período letivo} 
+
+    \begin{description}
+        \item \textbf{Descrição} A avaliação de uma disciplina só é permitida para alunos que estiveram matriculados nela durante o período letivo. Se um aluno não estiver matriculado em uma disciplina específica, ele não terá permissão para realizar a avaliação dessa disciplina.
+    \end{description}
+  
+  %\textbf{Regras relacionadas} RN1, RN2, RN4   
+
+  % RN4
+    \item \textbf{RN04 - Alunos só podem avaliar disciplinas uma única vez no período letivo} 
+        \begin{description}
+            \item \textbf{Descrição} Para cada período letivo, um aluno só pode realizar a avaliação de uma disciplina uma vez. Após a realização da avaliação de uma disciplina, o aluno não poderá repetir ou refazer a avaliação para a mesma disciplina no mesmo período letivo.
+        \end{description}
+  
+  %\textbf{Regras relacionadas} -
+
+  % RN5
+    \item \textbf{RN05 - Confidencialidade das respostas dos alunos} 
+        \begin{description}
+            \item \textbf{Descrição} O sistema deve garantir que a identidade do aluno não seja revelada no processo de avaliação.
+        \end{description}
+  
+  %textbf{Regras relacionadas} -
+
+  % RN6
+    \item \textbf{RN06 - Usuários registrados como professor podem visualizar suas análises} 
+        \begin{description}
+            \item \textbf{Descrição} Usuário com perfil professor só pode visualizar as avaliações atribuídas a ele mesmo nas disciplinas que ministrou. As avaliações de outros professores em disciplinas diferentes não são acessíveis para visualização pelo professor.
+        \end{description}
+    
+  %\textbf{Regras relacionadas} -
+
+  %%%%%%%%%%%%%%%% professor %%%%%%%%%%%%%%%%
+
+  % RN7
+    \item \textbf{RN07 - Usuários registrados como coordenador podem visualizar relatórios gerais} 
+        \begin{description}
+            \item \textbf{Descrição} Apenas usuários com o perfil coordenador no sistema tem permissão para visualizar os relatórios gerais das disciplinas e professores do departamento. Outros usuários não têm acesso a esses relatórios. 
+        \end{description}
+  
+  %\textbf{Regras relacionadas} -
+
+  % RN8
+\item \textbf{RN08 - Usuários registrados como coordenador podem cadastrar disciplinas} 
+    \begin{description}
+        \item \textbf{Descrição} Apenas o coordenador do departamento tem a capacidade de adicionar novas disciplinas ao sistema e realizar alterações em disciplinas existentes.
+    \end{description}
+  
+  %\textbf{Regras relacionadas} -
+
+  % RN9
+    \item \textbf{RN09 - Usuários registrados como coordenador podem cadastrar disciplinas} 
+        \begin{description}
+            \item \textbf{Descrição} Apenas o coordenador do departamento tem a capacidade de adicionar novas disciplinas ao sistema e realizar alterações em disciplinas existentes.
+        \end{description}
+    
+  %\textbf{Regras relacionadas} -
+
+   % RN10
+    \item \textbf{RN10 - Usuários registrados como coordenador podem cadastrar períodos letivos} 
+        \begin{description}
+            \item \textbf{Descrição} Apenas o coordenador do departamento tem a permissão de incluir um novo período letivo no sistema e realizar alterações em períodos existentes.
+        \end{description}
+    
+  %\textbf{Regras relacionadas} -
+
+   % RN11
+    \item \textbf{RN11 - Serão ofertadas disciplinas do Departamento de Ciência da Computação} 
+        \begin{description}
+            \item \textbf{Descrição} Somente as disciplinas pertencentes ao Departamento de Ciência da Computação serão disponibilizadas para avaliação pelos estudantes.
+        \end{description}
+        
+  %\textbf{Regras relacionadas} -
+  
+  \end{description}
+
+  
+  \begin{comment}    
   \item \textbf{RN3 - Restrição de anonimato} O Aluno não pode ser identificado na avaliação: A avaliação deverá ser anônima.
   \item \textbf{RN4 - Restrição de acesso aos relatórios} O Professor pode visualizar somente os relatórios de suas disciplinas: Não é permitido acessar relatórios de outros professores.
   \item \textbf{RN5 - Acesso do Coordenador aos relatórios} O Coordenador pode ver relatórios de todas as disciplinas: O Coordenador deve ter uma visão geral com todos os relatórios de avaliações das disciplinas do curso.
   \item \textbf{RN6 - Cadastro de disciplinas} O Coordenador pode cadastrar disciplinas: Somente o Coordenador pode realizar cadastros de disciplinas e associar professores a elas.
-\end{alineas}
+  \end{comment}
+
 
 Esses exemplos destacam algumas das regras de negócio cruciais para o funcionamento do sistema de avaliação de disciplinas. Ao seguir essas regras, é possível desenvolver uma aplicação segura, eficiente e que respeite a privacidade dos dados dos usuários.
 
@@ -179,6 +292,42 @@ Alguns requisitos funcionais do sistema de avaliação de disciplina são:
 
 % escrever mais requisitos
 
+\begin{description}
+    \item \textbf{RF01 - Autenticar usuário}
+        O sistema deve permitir o acesso do usuário ao serem informados os dados e-mail e senha.
+        
+    \item \textbf{RF02 - Cadastrar disciplina}
+        O sistema deve permitir que o coordenador cadastre disciplinas, fornecendo nome, código, turno, período letivo e professor.
+    
+    \item \textbf{RF03 - Editar disciplina}
+        O sistema deve permitir que o coordenador edite as informações de uma disciplina cadastrada, podendo alterar o nome, código, turno, período letivo e professor.
+
+    \item \textbf{RF04 - Excluir disciplina}
+        O sistema deve permitir que o coordenador exclua disciplinas previamente cadastradas, garantindo que todas as informações relacionadas sejam removidas do sistema de forma permanente.
+
+    \item \textbf{RF05 - Listar disciplina}
+        O sistema deve permitir que as disciplinas cadastradas sejam exibidas para os usuários.
+
+    \item \textbf{RF06 - Avaliar disciplina}
+        O sistema deve permitir que o aluno avalie as disciplinas cursadas e os professores que as ministraram.
+
+    \item \textbf{RF07 - Cadastrar período letivo}
+        O sistema deve permitir que o coordenador insira períodos letivos no sistema, fornecendo nome e o atributo \textit{default}, que indica se o período é o período atual.
+    
+    \item \textbf{RF08 - Editar período letivo}
+        O sistema deve permitir que o coordenador edite as informações de um período letivo, podendo alterar o nome.
+
+    \item \textbf{RF09 - Excluir período letivo}
+       O sistema deve permitir que o coordenador exclua períodos registrados no sistema, garantindo que todas as informações relacionadas sejam removidas de forma segura.
+
+    \item \textbf{RF10 - Visualizar relatórios gerais}
+        O sistema deve permitir que o coordenador acesse os relatórios das avaliações e métricas de todas as disciplinas e professores do departamento.
+
+    \item \textbf{RF11 - Visualizar avaliação individual}
+        O sistema deve permitir que o professor acesse os resultados das avaliações realizadas pelos alunos e métricas das disciplinas que eles próprios ministram.
+            
+\end{description}
+\begin{comment}
 \begin{alineas}
     \item \textbf{RF1 - Cadastrar disciplina} O Coordenador poderá cadastrar disciplinas informando nome, turno, professor e período letivo.
     \item \textbf{RF2 - Editar disciplina} O Coordenador poderá editar o nome, turno, professor e período letivo de uma disciplina.
@@ -188,7 +337,8 @@ Alguns requisitos funcionais do sistema de avaliação de disciplina são:
     \item \textbf{RF6 - Editar período} O Coordenador poderá editar o ano de um período letivo cadastrado no sistema.
     \item \textbf{RF7 - Excluir período} O Coordenador poderá excluir um período letivo.
     \item \textbf{RF8 - Visualizar relatórios} O Coordenador e o Professor poderão visualizar relatórios de avaliações.
-\end{alineas}
+\end{alineas}    
+\end{comment}
 
 Ao satisfazer todos os requisitos do sistema, podemos garantir que o software é confiável e funcional. 
 
@@ -199,6 +349,61 @@ Os casos de uso representam interações entre os atores e o sistema. Eles docum
 
 Alguns casos de uso do sistema de avaliação de disciplina são:
 
+\begin{description}
+
+\begin{comment}
+    \item \textbf{UC0X - NOME}
+        \begin{description}
+            \item \textbf{Atores} ATORES
+            \item \textbf{Descrição} DESCRIÇÃO
+            \item \textbf{Fluxo básico}
+            \begin{enumerate}
+                \item FLUXO
+            \end{enumerate}
+        \end{description}
+\end{comment}
+        
+        
+    \item \textbf{UC01 - Efetuar login}
+        \begin{description}
+            \item \textbf{Atores} Aluno, Professor, Coordenador.
+            \item \textbf{Descrição} Autenticação de usuários cadastrados no sistema, permitindo a realização de operações restritas à seu respectivo perfil.
+            \item \textbf{Fluxo básico}
+            \begin{enumerate}
+                \item O usuário informa suas credenciais (nome de usuário ou matrícula e senha).
+                \item O sistema verifica as credencias fornecidas.
+                \item Se as credencias forem válidas, o usuário é autenticado e redirecionado para a página principal.
+                \item Caso contrário, é exibida uma mensagem de erro e o usuário deve fornecer dados válidos para continuar.
+            \end{enumerate}
+        \end{description}
+
+    \item \textbf{UC02 - Cadastrar disciplina}
+        \begin{description}
+            \item \textbf{Atores} Coordenador
+            \item \textbf{Descrição} Inclusão de disciplinas no sistema
+            \begin{enumerate}
+                \item O coordenador se autentica no sistema
+                \item O sistema o redireciona para a página principal
+                \item O coordenador acessa o formulário de cadastro de disciplina
+                \item O sistema exibe o formulário de cadastro de disciplina e solicita as informações necessárias para o cadastro: código identificador, nome da disciplina, período letivo, o professor que irá ministrá-la e seu turno.
+                \item O coordenador preenche o formulário com os dados da disciplina.
+                \item O coordenador submete o formulário.
+                \item O sistema valida os dados e, em caso de sucesso, registra a disciplina no sistema.                
+            \end{enumerate}
+        \end{description}
+
+        \item \textbf{UC03 - NOME}
+        \begin{description}
+            \item \textbf{Atores} ATORES
+            \item \textbf{Descrição} DESCRIÇÃO
+            \item \textbf{Fluxo básico}
+            \begin{enumerate}
+                \item FLUXO
+            \end{enumerate}
+        \end{description}
+\end{description}
+
+\begin{comment}
 \begin{alineas}
     \item \textbf{Efetuar login}
         \begin{alineas}
@@ -231,6 +436,7 @@ Alguns casos de uso do sistema de avaliação de disciplina são:
             \item \textbf{Descrição} Visualização de relatórios das avaliações feitas pelos alunos da disciplina.
         \end{alineas}
 \end{alineas}
+\end{comment}
 
 Os casos de uso listados exemplificam algumas das interações e funcionalidades mais importantes da aplicação.
 
@@ -242,12 +448,11 @@ Na figura \ref{fig:fig_diagrama_er} podemos observar a representação gráfica 
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=1\textwidth]{imagens/diagrama-er-sistema-avaliacao-disciplina.jpeg}
+  \includegraphics[width=1\textwidth]{imagens/diagrama-er-sad.jpeg}
   \caption{Diagrama ER da aplicação proposta}
   \label{fig:fig_diagrama_er}
   %\legend{Fonte: o autor.}
 \end{figure}
-
 
 % Explicar melhor tomadas de decisao na entidas
 % Materias dividas em eriodos para saber onde

@@ -1,0 +1,35 @@
+async store({ request, response, auth }) {
+    try {
+      const data = request.only([
+        "pergunta1",
+        "pergunta2",
+        "pergunta3",
+        "disciplina_id",
+      ]);
+
+      const pessoa = await Pessoa.findBy("user_id", auth.user.id);
+
+      if (pessoa.perfil != "aluno")
+        return response
+          .status(500)
+          .send("Avaliações devem ser feitas por alunos.");
+
+      const avaliacaoExistente = await Avaliacao.query()
+        .where({
+          pessoa_id: pessoa.id,
+          disciplina_id: data.disciplina_id,
+        })
+        .first();
+
+      if (avaliacaoExistente)
+        return response.status(500).send("Essa disciplina já foi avaliada.");
+
+      const avaliacao = await Avaliacao.create({
+        pessoa_id: pessoa.id,
+        ...data,
+      });
+      return avaliacao;
+    } catch (error) {
+      return response.status(500).send(error.message);
+    }
+}
